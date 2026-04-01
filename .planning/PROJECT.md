@@ -1,12 +1,12 @@
-# ParliamentRAG — Build Pipeline Refactoring
+# ParliamentRAG — Full Codebase Refactoring
 
 ## What This Is
 
-A complete refactoring of the ParliamentRAG database build pipeline and backend query layer. The project transforms a working but messy ingestion system (mixed Italian/English schema, redundant properties, fragile chunking) into clean, explainable, best-practice code with a normalized English-only Neo4j schema. The end result is a single `make db-all` command that builds the entire database from scratch with fresh data.
+A comprehensive refactoring of the entire ParliamentRAG codebase: build pipeline, backend services, API routers, utility scripts, and frontend. The project transforms a working but messy system (mixed Italian/English naming, redundant code, fragile logic) into clean, explainable, best-practice code. Normalized English-only Neo4j schema, clean Python services, structured FastAPI routers, and polished React frontend.
 
 ## Core Value
 
-A clean, correct, and explainable build pipeline that produces a well-structured Neo4j database optimized for the RAG retrieval system.
+A clean, correct, and explainable codebase that is easy to maintain, extend, and reason about — from database build to frontend UI.
 
 ## Requirements
 
@@ -25,24 +25,47 @@ A clean, correct, and explainable build pipeline that produces a well-structured
 
 ### Active
 
+**Build Pipeline:**
 - [ ] Normalize entire Neo4j schema to English (node labels, properties, relationships)
 - [ ] Remove `ingest_stenografici.py` Italian-schema save path (keep only parser logic)
 - [ ] Consolidate build into single clean `build_and_update.py` with English-only output
 - [ ] Remove redundant properties: `start_char_raw`/`end_char_raw` on Chunk, `preprocessed_text` on Speech (keep only `text`), `complete_date` on Session (use Neo4j Date)
 - [ ] Clean up chunking code: remove dead alignment_map logic, simplify sentence splitting
-- [ ] Keep Votazione nodes (English: `Vote`) for future RAG integration
-- [ ] Update all backend Cypher queries to match new schema property names
+- [ ] Keep Vote nodes (renamed from Votazione) for future RAG integration
+- [ ] Analyze XML stenographic files for additional extractable information (metadata, references, links to acts, etc.)
 - [ ] Single `make db-all` target that rebuilds entire DB from scratch with fresh data
-- [ ] Code follows Python best practices: type hints, docstrings in English, no dead code
-- [ ] Remove Italian-schema legacy code (constraints, indexes, save_to_neo4j method)
+
+**Backend Services:**
+- [ ] Refactor retrieval services (dense_channel, graph_channel, engine, merger) — clean naming, structure, dead code
+- [ ] Refactor generation services (pipeline, sectional, integrator, etc.) — clean naming, structure
+- [ ] Refactor authority scoring services — clean naming, ensure consistency
+- [ ] Update all Cypher queries to match new schema property names
+
+**Backend API:**
+- [ ] Refactor FastAPI routers (query, chat, history, evaluation, search, authority, config)
+- [ ] Clean up endpoint naming, request/response models
+- [ ] Remove dead endpoints and unused code
+
+**Backend Scripts:**
+- [ ] Refactor utility scripts (seed_eval, compute_baseline, compute_spread, enrich_evaluation_set)
+- [ ] Consistent naming, docstrings, error handling
+
+**Frontend:**
+- [ ] Refactor Next.js/React components — clean naming, structure, dead code
+- [ ] Consistent TypeScript types and interfaces
+
+**Code Quality (all layers):**
+- [ ] Python: type hints, English docstrings, no dead code, consistent naming
+- [ ] TypeScript: strict types, clean imports, no any
+- [ ] Comments only where logic is non-obvious
 
 ### Out of Scope
 
-- Votazioni integration into RAG pipeline — future milestone
-- Frontend changes — not affected by schema refactoring
-- Changing the RAG retrieval logic itself — only updating property names in queries
+- Votazioni integration into RAG pipeline — separate future milestone
+- Changing the RAG retrieval algorithm itself — only cleaning implementation
 - Changing embedding dimensions or model — keep OpenAI text-embedding-ada-002 @ 1536d
-- Rewriting the XML parser from scratch — `parse_xml_file` logic is correct, just needs cleanup
+- Adding new features — this is purely about code quality and correctness
+- Redesigning the frontend UI/UX — only code cleanup
 
 ## Context
 
@@ -63,12 +86,21 @@ Only #2 is used in production. The Italian `save_to_neo4j()` method and its cons
 - Session: `complete_date` string + `date` Neo4j Date (keep only `date`)
 - Speech: `surname_name` (only used for orphan reconciliation fallback — keep but rename)
 
+**XML analysis opportunity:**
+The stenographic XML files may contain additional extractable information (references to acts, cross-links between debates, procedural metadata) that isn't currently being captured. Research phase should analyze sample XMLs to identify valuable data.
+
 **Backend files that need query updates:**
 - `backend/app/services/neo4j_client.py` — vector search query
 - `backend/app/services/retrieval/graph_channel.py` — graph retrieval
 - `backend/scripts/compute_baseline_experts.py`
 - `backend/scripts/enrich_evaluation_set.py`
 - Various routers that read chunk/speech properties
+
+**Full codebase scope:**
+- Backend services: ~15 Python modules in `backend/app/services/`
+- Backend routers: 7 FastAPI routers in `backend/app/routers/`
+- Backend scripts: 5 utility scripts in `backend/scripts/`
+- Frontend: Next.js app in `frontend/src/`
 
 ## Constraints
 
@@ -87,6 +119,8 @@ Only #2 is used in production. The Italian `save_to_neo4j()` method and its cons
 | Rename Votazione → Vote, keep in schema | User wants future RAG integration with votes | — Pending |
 | Remove Italian save path entirely | Only English schema used in production | — Pending |
 | Update backend queries in same milestone | Avoid broken state between build and backend | — Pending |
+| Full codebase refactoring scope | User wants expert-level cleanup of everything, not just build | — Pending |
+| Analyze XML for additional extractable data | May reveal valuable metadata not currently captured | — Pending |
 
 ---
-*Last updated: 2026-04-02 after initialization*
+*Last updated: 2026-04-02 after scope expansion to full codebase*
