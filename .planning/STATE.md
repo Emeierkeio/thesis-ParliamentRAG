@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-backend-02-PLAN.md
-last_updated: "2026-04-02T15:55:17.635Z"
+stopped_at: Completed 02-backend-01-PLAN.md
+last_updated: "2026-04-02T15:59:53.132Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 11
-  completed_plans: 6
+  completed_plans: 7
   percent: 0
 ---
 
@@ -55,6 +55,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-build-pipeline P03 | 5 | 2 tasks | 2 files |
 | Phase 01-build-pipeline P04 | 12 | 2 tasks | 5 files |
 | Phase 02-backend P02 | 5 | 2 tasks | 6 files |
+| Phase 02-backend P01 | 8min | 2 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,8 @@ Recent decisions affecting current work:
 - [Phase 02-backend]: lru_cache provides singleton semantics for FastAPI Depends without extra DI container
 - [Phase 02-backend]: Kept get_services() backward-compat wrapper so unmigrated routers continue to work during incremental migration
 - [Phase 02-backend]: conftest.py client fixture patches get_neo4j_client function (not removed _neo4j_client global) after deps.py rewrite
+- [Phase 02-backend]: Pydantic model tests use source-file inspection (not live import) to avoid scipy/numpy NumPy 2.x incompatibility in the Python 3.12 anaconda environment
+- [Phase 02-backend]: chunk_text replaces span-based extraction as citation source throughout evidence.py router (start_char_raw/end_char_raw removed from Phase 1 schema)
 
 ### Pending Todos
 
@@ -94,6 +97,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T15:55:17.632Z
-Stopped at: Completed 02-backend-02-PLAN.md
+Last session: 2026-04-02T15:59:53.130Z
+Stopped at: Completed 02-backend-01-PLAN.md
 Resume file: None

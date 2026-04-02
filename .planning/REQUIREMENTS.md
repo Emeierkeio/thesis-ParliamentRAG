@@ -26,7 +26,7 @@
 
 ### Backend Services
 
-- [ ] **SVC-01**: Update all Cypher queries across 6+ modules to match new camelCase property names
+- [x] **SVC-01**: Update all Cypher queries across 6+ modules to match new camelCase property names
 - [ ] **SVC-02**: Extract expert computation into `services/experts.py` (unify `chat.py` and `query.py` duplicate implementations)
 - [ ] **SVC-03**: Extract evaluation business logic into `services/evaluation_service.py` (decouple from router)
 - [x] **SVC-04**: Replace `get_services()` dict with FastAPI `Depends()` typed dependency injection
@@ -37,7 +37,7 @@
 
 - [ ] **API-01**: Refactor routers to thin wrappers around services (no business logic in routers)
 - [ ] **API-02**: Fix cross-router import violations (evaluation.py→survey.py, seed script→chat.py)
-- [ ] **API-03**: Freeze SSE event contract (document all 18 yield sites, ensure no behavioral changes)
+- [x] **API-03**: Freeze SSE event contract (document all 18 yield sites, ensure no behavioral changes)
 - [ ] **API-04**: Clean endpoint naming, Pydantic v2 models, consistent error handling
 - [ ] **API-05**: Preserve API response shapes (frontend contract must not break)
 
@@ -67,7 +67,7 @@
 
 ### Code Quality
 
-- [ ] **QA-01**: Add smoke tests for critical paths (build pipeline, retrieval, evaluation) — zero current coverage
+- [x] **QA-01**: Add smoke tests for critical paths (build pipeline, retrieval, evaluation) — zero current coverage
 - [ ] **QA-02**: Python code follows best practices: type hints, English docstrings, no dead code
 - [ ] **QA-03**: Consistent naming conventions across entire codebase (camelCase Neo4j, snake_case Python, camelCase TypeScript)
 
@@ -113,7 +113,7 @@
 | DATA-02 | Phase 1 | Complete |
 | DATA-03 | Phase 1 | Complete |
 | DATA-04 | Phase 1 | Complete |
-| SVC-01 | Phase 2 | Pending |
+| SVC-01 | Phase 2 | Complete |
 | SVC-02 | Phase 2 | Pending |
 | SVC-03 | Phase 2 | Pending |
 | SVC-04 | Phase 2 | Complete |
@@ -121,13 +121,13 @@
 | SVC-06 | Phase 2 | Pending |
 | API-01 | Phase 2 | Pending |
 | API-02 | Phase 2 | Pending |
-| API-03 | Phase 2 | Pending |
+| API-03 | Phase 2 | Complete |
 | API-04 | Phase 2 | Pending |
 | API-05 | Phase 2 | Pending |
 | SCR-01 | Phase 2 | Pending |
 | SCR-02 | Phase 2 | Pending |
 | SCR-03 | Phase 2 | Pending |
-| QA-01 | Phase 2 | Pending |
+| QA-01 | Phase 2 | Complete |
 | QA-02 | Phase 2 | Pending |
 | QA-03 | Phase 2 | Pending |
 | FE-01 | Phase 3 | Pending |
