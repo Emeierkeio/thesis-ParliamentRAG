@@ -10,7 +10,7 @@
 - [ ] **BUILD-01**: Build pipeline produces English-only Neo4j schema (camelCase properties, PascalCase labels, SCREAMING_SNAKE_CASE relationships)
 - [ ] **BUILD-02**: Remove Italian-schema dead code from `ingest_stenografici.py` (save_to_neo4j, Italian constraints/indexes)
 - [ ] **BUILD-03**: Extract XML parser class from `ingest_stenografici.py` into standalone module (decouple from save logic)
-- [ ] **BUILD-04**: Remove redundant Chunk properties (`startCharRaw`, `endCharRaw`) and dead alignment_map code
+- [x] **BUILD-04**: Remove redundant Chunk properties (`startCharRaw`, `endCharRaw`) and dead alignment_map code
 - [ ] **BUILD-05**: Remove redundant Speech property (`preprocessedText` — keep only `text` as preprocessed)
 - [ ] **BUILD-06**: Remove redundant Session property (`completeDate` — use only Neo4j Date `date`)
 - [ ] **BUILD-07**: Use UNWIND batch writes for bulk ingestion (replace per-item MERGE loops)
@@ -103,7 +103,7 @@
 | BUILD-01 | Phase 1 | Pending |
 | BUILD-02 | Phase 1 | Pending |
 | BUILD-03 | Phase 1 | Pending |
-| BUILD-04 | Phase 1 | Pending |
+| BUILD-04 | Phase 1 | Complete |
 | BUILD-05 | Phase 1 | Pending |
 | BUILD-06 | Phase 1 | Pending |
 | BUILD-07 | Phase 1 | Pending |
