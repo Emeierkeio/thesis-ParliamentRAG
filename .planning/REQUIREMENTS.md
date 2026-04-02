@@ -119,32 +119,32 @@
 | SVC-04 | Phase 2 | Pending |
 | SVC-05 | Phase 2 | Pending |
 | SVC-06 | Phase 2 | Pending |
-| API-01 | Phase 3 | Pending |
-| API-02 | Phase 3 | Pending |
-| API-03 | Phase 3 | Pending |
-| API-04 | Phase 3 | Pending |
-| API-05 | Phase 3 | Pending |
-| SCR-01 | Phase 3 | Pending |
-| SCR-02 | Phase 3 | Pending |
-| SCR-03 | Phase 3 | Pending |
-| FE-01 | Phase 4 | Pending |
-| FE-02 | Phase 4 | Pending |
-| FE-03 | Phase 4 | Pending |
-| RET-01 | Phase 5 | Pending |
-| RET-02 | Phase 5 | Pending |
-| ENR-01 | Phase 5 | Pending |
-| ENR-02 | Phase 5 | Pending |
-| ENR-03 | Phase 5 | Pending |
-| ENR-04 | Phase 5 | Pending |
+| API-01 | Phase 2 | Pending |
+| API-02 | Phase 2 | Pending |
+| API-03 | Phase 2 | Pending |
+| API-04 | Phase 2 | Pending |
+| API-05 | Phase 2 | Pending |
+| SCR-01 | Phase 2 | Pending |
+| SCR-02 | Phase 2 | Pending |
+| SCR-03 | Phase 2 | Pending |
 | QA-01 | Phase 2 | Pending |
 | QA-02 | Phase 2 | Pending |
 | QA-03 | Phase 2 | Pending |
+| FE-01 | Phase 3 | Pending |
+| FE-02 | Phase 3 | Pending |
+| FE-03 | Phase 3 | Pending |
+| RET-01 | Phase 4 | Pending |
+| RET-02 | Phase 4 | Pending |
+| ENR-01 | Phase 4 | Pending |
+| ENR-02 | Phase 4 | Pending |
+| ENR-03 | Phase 4 | Pending |
+| ENR-04 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 36 total
-- Mapped to phases: 36
-- Unmapped: 0 ✓
+- v1 requirements: 39 total
+- Mapped to phases: 39
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-02*
-*Last updated: 2026-04-02 after initial definition*
+*Last updated: 2026-04-02 — Traceability updated to match 4-phase coarse roadmap*
