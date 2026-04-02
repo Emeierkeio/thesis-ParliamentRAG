@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-backend-04-PLAN.md
-last_updated: "2026-04-02T16:18:47.026Z"
+stopped_at: Completed 02-backend-05-PLAN.md
+last_updated: "2026-04-02T16:26:12.555Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 11
-  completed_plans: 9
+  completed_plans: 10
   percent: 0
 ---
 
@@ -58,6 +58,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-backend P01 | 8min | 2 tasks | 12 files |
 | Phase 02-backend P03 | 25min | 2 tasks | 8 files |
 | Phase 02-backend P04 | 6min | 2 tasks | 3 files |
+| Phase 02-backend P05 | 5min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -89,6 +90,8 @@ Recent decisions affecting current work:
 - [Phase 02-backend]: services/experts.py uses combined ranking formula 0.70*authority+0.30*similarity as canonical; authority_only available via param
 - [Phase 02-backend]: Cross-router imports broken by extracting shared helpers to services/survey_helpers.py (both evaluation.py and survey.py can import from it)
 - [Phase 02-backend]: Extracted evaluation metric computation verbatim to evaluation_service.py; router retains Neo4j I/O; all three MEMORY.md bug fixes preserved
+- [Phase 02-backend]: TestClient functional tests use sys.modules stubs to bypass scipy/NumPy 2.x import chain in anaconda environment
+- [Phase 02-backend]: data.py router registered directly in main.py (not via routers/__init__.py) to avoid changing package init
 
 ### Pending Todos
 
@@ -102,6 +105,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T16:18:47.024Z
-Stopped at: Completed 02-backend-04-PLAN.md
+Last session: 2026-04-02T16:26:12.553Z
+Stopped at: Completed 02-backend-05-PLAN.md
 Resume file: None

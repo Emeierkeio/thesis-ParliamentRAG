@@ -38,14 +38,14 @@
 - [x] **API-01**: Refactor routers to thin wrappers around services (no business logic in routers)
 - [x] **API-02**: Fix cross-router import violations (evaluation.py→survey.py, seed script→chat.py)
 - [x] **API-03**: Freeze SSE event contract (document all 18 yield sites, ensure no behavioral changes)
-- [ ] **API-04**: Clean endpoint naming, Pydantic v2 models, consistent error handling
-- [ ] **API-05**: Preserve API response shapes (frontend contract must not break)
+- [x] **API-04**: Clean endpoint naming, Pydantic v2 models, consistent error handling
+- [x] **API-05**: Preserve API response shapes (frontend contract must not break)
 
 ### Backend Scripts
 
-- [ ] **SCR-01**: Refactor utility scripts with consistent naming, docstrings, error handling
+- [x] **SCR-01**: Refactor utility scripts with consistent naming, docstrings, error handling
 - [x] **SCR-02**: Fix `seed_evaluation_topic.py` router-import coupling (use extracted service)
-- [ ] **SCR-03**: Scripts use shared Neo4j client instead of creating own connections
+- [x] **SCR-03**: Scripts use shared Neo4j client instead of creating own connections
 
 ### Frontend
 
@@ -122,11 +122,11 @@
 | API-01 | Phase 2 | Complete |
 | API-02 | Phase 2 | Complete |
 | API-03 | Phase 2 | Complete |
-| API-04 | Phase 2 | Pending |
-| API-05 | Phase 2 | Pending |
-| SCR-01 | Phase 2 | Pending |
+| API-04 | Phase 2 | Complete |
+| API-05 | Phase 2 | Complete |
+| SCR-01 | Phase 2 | Complete |
 | SCR-02 | Phase 2 | Complete |
-| SCR-03 | Phase 2 | Pending |
+| SCR-03 | Phase 2 | Complete |
 | QA-01 | Phase 2 | Complete |
 | QA-02 | Phase 2 | Pending |
 | QA-03 | Phase 2 | Pending |
