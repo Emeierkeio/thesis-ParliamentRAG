@@ -29,8 +29,8 @@
 - [ ] **SVC-01**: Update all Cypher queries across 6+ modules to match new camelCase property names
 - [ ] **SVC-02**: Extract expert computation into `services/experts.py` (unify `chat.py` and `query.py` duplicate implementations)
 - [ ] **SVC-03**: Extract evaluation business logic into `services/evaluation_service.py` (decouple from router)
-- [ ] **SVC-04**: Replace `get_services()` dict with FastAPI `Depends()` typed dependency injection
-- [ ] **SVC-05**: Fix search.py duplicate Neo4j connection pool (use shared client from deps.py)
+- [x] **SVC-04**: Replace `get_services()` dict with FastAPI `Depends()` typed dependency injection
+- [x] **SVC-05**: Fix search.py duplicate Neo4j connection pool (use shared client from deps.py)
 - [ ] **SVC-06**: Clean naming, type hints, English docstrings across all service modules
 
 ### Backend API
@@ -116,8 +116,8 @@
 | SVC-01 | Phase 2 | Pending |
 | SVC-02 | Phase 2 | Pending |
 | SVC-03 | Phase 2 | Pending |
-| SVC-04 | Phase 2 | Pending |
-| SVC-05 | Phase 2 | Pending |
+| SVC-04 | Phase 2 | Complete |
+| SVC-05 | Phase 2 | Complete |
 | SVC-06 | Phase 2 | Pending |
 | API-01 | Phase 2 | Pending |
 | API-02 | Phase 2 | Pending |
