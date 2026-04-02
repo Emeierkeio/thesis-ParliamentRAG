@@ -46,7 +46,15 @@ Plans:
   3. `search.py` uses the shared Neo4j client from `deps.py` (no duplicate connection pool)
   4. Expert computation exists in exactly one place (`services/experts.py`) — chat and query routers both delegate to it
   5. A smoke test suite runs against the critical paths (build pipeline, retrieval, evaluation) and passes
-**Plans**: TBD
+**Plans**: 6 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Test infrastructure, SSE contract doc, and dead Cypher property removal
+- [ ] 02-02-PLAN.md — Rewrite DI to typed Depends(), fix duplicate Neo4j pools
+- [ ] 02-03-PLAN.md — Unified expert service extraction, cross-layer import fixes
+- [ ] 02-04-PLAN.md — Evaluation service extraction from router
+- [ ] 02-05-PLAN.md — New data endpoints (votes, acts), script DI refactoring
+- [ ] 02-06-PLAN.md — Code quality sweep, comprehensive tests (80+), SSE contract verification
 
 ### Phase 3: Frontend
 **Goal**: The Next.js frontend has strict TypeScript (no `any`), English naming throughout, and clean component structure with no dead code
@@ -79,6 +87,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Build Pipeline | 4/5 | Complete    | 2026-04-02 |
-| 2. Backend | 0/TBD | Not started | - |
+| 2. Backend | 0/6 | Planning complete | - |
 | 3. Frontend | 0/TBD | Not started | - |
 | 4. Enrichment | 0/TBD | Not started | - |
