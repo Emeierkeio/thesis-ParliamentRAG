@@ -28,14 +28,14 @@
 
 - [x] **SVC-01**: Update all Cypher queries across 6+ modules to match new camelCase property names
 - [x] **SVC-02**: Extract expert computation into `services/experts.py` (unify `chat.py` and `query.py` duplicate implementations)
-- [ ] **SVC-03**: Extract evaluation business logic into `services/evaluation_service.py` (decouple from router)
+- [x] **SVC-03**: Extract evaluation business logic into `services/evaluation_service.py` (decouple from router)
 - [x] **SVC-04**: Replace `get_services()` dict with FastAPI `Depends()` typed dependency injection
 - [x] **SVC-05**: Fix search.py duplicate Neo4j connection pool (use shared client from deps.py)
 - [ ] **SVC-06**: Clean naming, type hints, English docstrings across all service modules
 
 ### Backend API
 
-- [ ] **API-01**: Refactor routers to thin wrappers around services (no business logic in routers)
+- [x] **API-01**: Refactor routers to thin wrappers around services (no business logic in routers)
 - [x] **API-02**: Fix cross-router import violations (evaluation.py→survey.py, seed script→chat.py)
 - [x] **API-03**: Freeze SSE event contract (document all 18 yield sites, ensure no behavioral changes)
 - [ ] **API-04**: Clean endpoint naming, Pydantic v2 models, consistent error handling
@@ -115,11 +115,11 @@
 | DATA-04 | Phase 1 | Complete |
 | SVC-01 | Phase 2 | Complete |
 | SVC-02 | Phase 2 | Complete |
-| SVC-03 | Phase 2 | Pending |
+| SVC-03 | Phase 2 | Complete |
 | SVC-04 | Phase 2 | Complete |
 | SVC-05 | Phase 2 | Complete |
 | SVC-06 | Phase 2 | Pending |
-| API-01 | Phase 2 | Pending |
+| API-01 | Phase 2 | Complete |
 | API-02 | Phase 2 | Complete |
 | API-03 | Phase 2 | Complete |
 | API-04 | Phase 2 | Pending |

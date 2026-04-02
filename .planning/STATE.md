@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-backend-03-PLAN.md
-last_updated: "2026-04-02T16:11:01.368Z"
+stopped_at: Completed 02-backend-04-PLAN.md
+last_updated: "2026-04-02T16:18:47.026Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 11
-  completed_plans: 8
+  completed_plans: 9
   percent: 0
 ---
 
@@ -57,6 +57,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-backend P02 | 5 | 2 tasks | 6 files |
 | Phase 02-backend P01 | 8min | 2 tasks | 12 files |
 | Phase 02-backend P03 | 25min | 2 tasks | 8 files |
+| Phase 02-backend P04 | 6min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,7 @@ Recent decisions affecting current work:
 - [Phase 02-backend]: chunk_text replaces span-based extraction as citation source throughout evidence.py router (start_char_raw/end_char_raw removed from Phase 1 schema)
 - [Phase 02-backend]: services/experts.py uses combined ranking formula 0.70*authority+0.30*similarity as canonical; authority_only available via param
 - [Phase 02-backend]: Cross-router imports broken by extracting shared helpers to services/survey_helpers.py (both evaluation.py and survey.py can import from it)
+- [Phase 02-backend]: Extracted evaluation metric computation verbatim to evaluation_service.py; router retains Neo4j I/O; all three MEMORY.md bug fixes preserved
 
 ### Pending Todos
 
@@ -100,6 +102,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T16:10:55.668Z
-Stopped at: Completed 02-backend-03-PLAN.md
+Last session: 2026-04-02T16:18:47.024Z
+Stopped at: Completed 02-backend-04-PLAN.md
 Resume file: None
