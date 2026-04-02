@@ -64,7 +64,11 @@ Plans:
   1. `tsc --strict` compiles the frontend with zero type errors (no `any` escapes)
   2. All Italian-language route paths, variable names, and comments are replaced with English equivalents
   3. The `/valutazione` → `/evaluation` rename works with a redirect so existing bookmarks do not break
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — SSE type interfaces and strict TypeScript (zero any)
+- [ ] 03-02-PLAN.md — Italian-to-English renames, route migration, barrel exports, dead code removal
 
 ### Phase 4: Enrichment
 **Goal**: The system retrieves more relevant results via BM25 sparse channel merged with RRF, and the graph contains per-deputy vote records, committee officer roles, and NER-extracted law/person references on chunks
@@ -88,5 +92,25 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Build Pipeline | 4/5 | Complete    | 2026-04-02 |
 | 2. Backend | 5/6 | Complete    | 2026-04-02 |
-| 3. Frontend | 0/TBD | Not started | - |
+| 3. Frontend | 0/2 | Not started | - |
 | 4. Enrichment | 0/TBD | Not started | - |
+
+### Phase 5: Multi-language support with translated citations and original-text hover disclaimer
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 4
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 5 to break down)
+
+### Phase 6: Senate data integration with chamber selector
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 5
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 6 to break down)
