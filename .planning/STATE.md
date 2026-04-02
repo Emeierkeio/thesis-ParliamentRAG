@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 04-enrichment-02-PLAN.md
-last_updated: "2026-04-02T21:54:41.331Z"
+stopped_at: Completed 04-enrichment-01-PLAN.md
+last_updated: "2026-04-02T21:56:58.769Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 16
-  completed_plans: 14
+  completed_plans: 15
   percent: 0
 ---
 
@@ -63,6 +63,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03-frontend P01 | 525623min | 2 tasks | 17 files |
 | Phase 03-frontend P02 | 10min | 2 tasks | 20 files |
 | Phase 04-enrichment P02 | 2min | 2 tasks | 3 files |
+| Phase 04-enrichment P01 | 4min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -103,6 +104,9 @@ Recent decisions affecting current work:
 - [Phase 03-frontend]: Wire-format SSE values preserved (maggioranza_percentage, opposizione_percentage, commissioni wire field); only local TypeScript identifiers translated to English
 - [Phase 03-frontend]: CoalitionFilter uses English majority/opposition values; filter predicate maps to wire maggioranza/opposizione
 - [Phase 04-enrichment]: stdlib urllib used for SPARQL HTTP (no requests/httpx dep); IndividualVote.id format iv_{person_id}_{session}_{vote} for MERGE idempotency
+- [Phase 04-enrichment]: RRF replaces weighted scoring in merger: rank-based fusion is parameter-free and cross-channel comparable
+- [Phase 04-enrichment]: similarity=0.5 sentinel for sparse results: BM25 raw scores not comparable to cosine; rank position drives fusion
+- [Phase 04-enrichment]: Italian analyzer with standard fallback in create_fulltext_index: Neo4j Community may not have italian analyzer
 
 ### Roadmap Evolution
 
@@ -121,6 +125,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T21:54:41.329Z
-Stopped at: Completed 04-enrichment-02-PLAN.md
+Last session: 2026-04-02T21:56:58.767Z
+Stopped at: Completed 04-enrichment-01-PLAN.md
 Resume file: None

@@ -98,14 +98,14 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Build Pipeline | 4/5 | Complete    | 2026-04-02 |
 | 2. Backend | 5/6 | Complete    | 2026-04-02 |
 | 3. Frontend | 2/2 | Complete    | 2026-04-02 |
-| 4. Enrichment | 1/3 | In Progress|  |
+| 4. Enrichment | 2/3 | In Progress|  |
 
 ### Phase 5: Multi-language support with translated citations and original-text hover disclaimer
 
 **Goal:** [To be planned]
 **Requirements**: TBD
 **Depends on:** Phase 4
-**Plans:** 1/3 plans executed
+**Plans:** 2/3 plans executed
 
 Plans:
 - [ ] TBD (run /gsd:plan-phase 5 to break down)
