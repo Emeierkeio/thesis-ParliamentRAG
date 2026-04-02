@@ -10,7 +10,7 @@ A bottom-up refactoring ordered by the dependency graph: build pipeline first (p
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Build Pipeline** - Clean English-only build pipeline with full data extraction
+- [x] **Phase 1: Build Pipeline** - Clean English-only build pipeline with full data extraction (completed 2026-04-02)
 - [ ] **Phase 2: Backend** - Services, routers, scripts, and code quality — deployed atomically with Phase 1 schema
 - [ ] **Phase 3: Frontend** - Strict TypeScript, English naming, clean components
 - [ ] **Phase 4: Enrichment** - Hybrid retrieval (BM25+RRF) and graph enrichment (SPARQL, NER)
@@ -78,7 +78,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Build Pipeline | 4/5 | In Progress|  |
+| 1. Build Pipeline | 4/5 | Complete    | 2026-04-02 |
 | 2. Backend | 0/TBD | Not started | - |
 | 3. Frontend | 0/TBD | Not started | - |
 | 4. Enrichment | 0/TBD | Not started | - |
