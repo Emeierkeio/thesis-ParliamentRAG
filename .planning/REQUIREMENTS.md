@@ -49,7 +49,7 @@
 
 ### Frontend
 
-- [ ] **FE-01**: Strict TypeScript — no `any` types, proper interfaces for all API responses
+- [x] **FE-01**: Strict TypeScript — no `any` types, proper interfaces for all API responses
 - [ ] **FE-02**: Clean component structure — remove dead code, consistent naming
 - [ ] **FE-03**: English route paths and variable names where currently Italian
 
@@ -130,7 +130,7 @@
 | QA-01 | Phase 2 | Complete |
 | QA-02 | Phase 2 | Complete |
 | QA-03 | Phase 2 | Complete |
-| FE-01 | Phase 3 | Pending |
+| FE-01 | Phase 3 | Complete |
 | FE-02 | Phase 3 | Pending |
 | FE-03 | Phase 3 | Pending |
 | RET-01 | Phase 4 | Pending |
