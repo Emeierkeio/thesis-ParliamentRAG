@@ -55,15 +55,15 @@
 
 ### Retrieval Enrichment
 
-- [ ] **RET-01**: Add BM25 sparse retrieval channel via Neo4j full-text index (zero new dependencies)
-- [ ] **RET-02**: Implement Reciprocal Rank Fusion (RRF) merger for hybrid dense+sparse+graph retrieval
+- [x] **RET-01**: Add BM25 sparse retrieval channel via Neo4j full-text index (zero new dependencies)
+- [x] **RET-02**: Implement Reciprocal Rank Fusion (RRF) merger for hybrid dense+sparse+graph retrieval
 
 ### Graph Enrichment
 
 - [x] **ENR-01**: SPARQL ingestion from dati.camera.it — per-deputy individual vote records
 - [x] **ENR-02**: SPARQL ingestion from dati.camera.it — committee officer roles with dates
-- [ ] **ENR-03**: NER at ingestion time on chunks — extract LAW and PERSON entity references
-- [ ] **ENR-04**: Store NER results as Chunk properties (lawRefs, personRefs) for entity-filtered retrieval
+- [x] **ENR-03**: NER at ingestion time on chunks — extract LAW and PERSON entity references
+- [x] **ENR-04**: Store NER results as Chunk properties (lawRefs, personRefs) for entity-filtered retrieval
 
 ### Code Quality
 
@@ -133,8 +133,8 @@
 | FE-01 | Phase 3 | Complete |
 | FE-02 | Phase 3 | Complete |
 | FE-03 | Phase 3 | Complete |
-| RET-01 | Phase 4 | Pending |
-| RET-02 | Phase 4 | Pending |
+| RET-01 | Phase 4 | Complete |
+| RET-02 | Phase 4 | Complete |
 | ENR-01 | Phase 4 | Complete |
 | ENR-02 | Phase 4 | Complete |
 | ENR-03 | Phase 4 | Pending |
