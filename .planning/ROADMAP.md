@@ -92,7 +92,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Build Pipeline | 4/5 | Complete    | 2026-04-02 |
 | 2. Backend | 5/6 | Complete    | 2026-04-02 |
-| 3. Frontend | 2/2 | Complete   | 2026-04-02 |
+| 3. Frontend | 2/2 | Complete    | 2026-04-02 |
 | 4. Enrichment | 0/TBD | Not started | - |
 
 ### Phase 5: Multi-language support with translated citations and original-text hover disclaimer
