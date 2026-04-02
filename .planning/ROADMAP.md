@@ -76,10 +76,15 @@ Plans:
 **Requirements**: RET-01, RET-02, ENR-01, ENR-02, ENR-03, ENR-04
 **Success Criteria** (what must be TRUE):
   1. Queries for specific deputy names or decree numbers ("decreto 231") return more relevant chunks than before due to BM25 sparse channel contributing to RRF-merged results
-  2. The graph contains individual deputy vote records linked from the SPARQL ingest (`make enrich-votes`)
+  2. The graph contains individual deputy vote records linked from the SPARQL ingest (`make enrich-sparql`)
   3. Chunk nodes carry `lawRefs` and `personRefs` arrays populated by NER at ingestion time
   4. Entity-filtered retrieval in `graph_channel.py` uses `lawRefs`/`personRefs` for targeted traversal
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — BM25 sparse channel, RRF merger, fulltext index in build pipeline
+- [ ] 04-02-PLAN.md — SPARQL ingestion (per-deputy votes + committee officer roles)
+- [ ] 04-03-PLAN.md — NER extraction module, build pipeline integration, entity-filtered retrieval
 
 ## Progress
 
@@ -93,7 +98,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Build Pipeline | 4/5 | Complete    | 2026-04-02 |
 | 2. Backend | 5/6 | Complete    | 2026-04-02 |
 | 3. Frontend | 2/2 | Complete    | 2026-04-02 |
-| 4. Enrichment | 0/TBD | Not started | - |
+| 4. Enrichment | 0/3 | Not started | - |
 
 ### Phase 5: Multi-language support with translated citations and original-text hover disclaimer
 
