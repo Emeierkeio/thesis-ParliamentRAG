@@ -50,8 +50,8 @@
 ### Frontend
 
 - [x] **FE-01**: Strict TypeScript — no `any` types, proper interfaces for all API responses
-- [ ] **FE-02**: Clean component structure — remove dead code, consistent naming
-- [ ] **FE-03**: English route paths and variable names where currently Italian
+- [x] **FE-02**: Clean component structure — remove dead code, consistent naming
+- [x] **FE-03**: English route paths and variable names where currently Italian
 
 ### Retrieval Enrichment
 
@@ -131,8 +131,8 @@
 | QA-02 | Phase 2 | Complete |
 | QA-03 | Phase 2 | Complete |
 | FE-01 | Phase 3 | Complete |
-| FE-02 | Phase 3 | Pending |
-| FE-03 | Phase 3 | Pending |
+| FE-02 | Phase 3 | Complete |
+| FE-03 | Phase 3 | Complete |
 | RET-01 | Phase 4 | Pending |
 | RET-02 | Phase 4 | Pending |
 | ENR-01 | Phase 4 | Pending |

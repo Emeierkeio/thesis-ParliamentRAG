@@ -12,7 +12,7 @@ A bottom-up refactoring ordered by the dependency graph: build pipeline first (p
 
 - [x] **Phase 1: Build Pipeline** - Clean English-only build pipeline with full data extraction (completed 2026-04-02)
 - [x] **Phase 2: Backend** - Services, routers, scripts, and code quality — deployed atomically with Phase 1 schema (completed 2026-04-02)
-- [ ] **Phase 3: Frontend** - Strict TypeScript, English naming, clean components
+- [x] **Phase 3: Frontend** - Strict TypeScript, English naming, clean components (completed 2026-04-02)
 - [ ] **Phase 4: Enrichment** - Hybrid retrieval (BM25+RRF) and graph enrichment (SPARQL, NER)
 
 ## Phase Details
@@ -92,7 +92,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Build Pipeline | 4/5 | Complete    | 2026-04-02 |
 | 2. Backend | 5/6 | Complete    | 2026-04-02 |
-| 3. Frontend | 1/2 | In Progress|  |
+| 3. Frontend | 2/2 | Complete   | 2026-04-02 |
 | 4. Enrichment | 0/TBD | Not started | - |
 
 ### Phase 5: Multi-language support with translated citations and original-text hover disclaimer
@@ -100,7 +100,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 **Goal:** [To be planned]
 **Requirements**: TBD
 **Depends on:** Phase 4
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] TBD (run /gsd:plan-phase 5 to break down)

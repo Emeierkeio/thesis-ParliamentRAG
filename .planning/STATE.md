@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 03-frontend-01-PLAN.md
-last_updated: "2026-04-02T18:23:26.434Z"
+stopped_at: Completed 03-frontend-02-PLAN.md
+last_updated: "2026-04-02T18:33:59.660Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 6
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 13
-  completed_plans: 12
+  completed_plans: 13
   percent: 0
 ---
 
@@ -61,6 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-backend P05 | 5min | 2 tasks | 6 files |
 | Phase 02-backend P06 | 15min | 2 tasks | 3 files |
 | Phase 03-frontend P01 | 525623min | 2 tasks | 17 files |
+| Phase 03-frontend P02 | 10min | 2 tasks | 20 files |
 
 ## Accumulated Context
 
@@ -98,6 +99,8 @@ Recent decisions affecting current work:
 - [Phase 02-backend]: SSE contract tests use multi-pattern matching (emit, emit_fn, sse_event, inline JSON) to detect all event emission styles
 - [Phase 03-frontend]: StepResult.details typed as Record<string,unknown> — collapsed from union for simplicity
 - [Phase 03-frontend]: GraphRecord = Record<string,unknown> with strProp() helper for type-safe string extraction
+- [Phase 03-frontend]: Wire-format SSE values preserved (maggioranza_percentage, opposizione_percentage, commissioni wire field); only local TypeScript identifiers translated to English
+- [Phase 03-frontend]: CoalitionFilter uses English majority/opposition values; filter predicate maps to wire maggioranza/opposizione
 
 ### Roadmap Evolution
 
@@ -116,6 +119,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T18:23:26.431Z
-Stopped at: Completed 03-frontend-01-PLAN.md
+Last session: 2026-04-02T18:33:59.658Z
+Stopped at: Completed 03-frontend-02-PLAN.md
 Resume file: None
