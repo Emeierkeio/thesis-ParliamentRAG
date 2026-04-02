@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-build-pipeline/01-02-PLAN.md
-last_updated: "2026-04-02T10:15:39.039Z"
+stopped_at: Completed 01-build-pipeline-01-PLAN.md
+last_updated: "2026-04-02T10:18:30.303Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 5
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-build-pipeline P02 | 4min | 1 tasks | 5 files |
+| Phase 01-build-pipeline P01 | 13 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,9 @@ Recent decisions affecting current work:
 - [Phase 01-02]: Used re.split with captured delimiter instead of lookbehind regex for sentence splitting — Python re does not support variable-width lookbehinds
 - [Phase 01-02]: build/ directory gitignored by Python convention; source files tracked via git add -f — gitignore needs update in Plan 01
 - [Phase 01-02]: Orphan final chunk below min_speech_length merged into previous chunk rather than dropped
+- [Phase 01-build-pipeline]: xml_parser.py has zero Neo4j dependency — StenograficoParser is a pure data extraction class
+- [Phase 01-build-pipeline]: Votes parsed from raccoltaVotazioni at resoconto level — Session-[:HAS_VOTE]->Vote (not Debate-[:HAS_VOTE]->Vote)
+- [Phase 01-build-pipeline]: preprocess_text() drops alignment_map return — no alignment_map logic in new codebase
 
 ### Pending Todos
 
@@ -79,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T10:15:39.037Z
-Stopped at: Completed 01-build-pipeline/01-02-PLAN.md
+Last session: 2026-04-02T10:18:30.301Z
+Stopped at: Completed 01-build-pipeline-01-PLAN.md
 Resume file: None

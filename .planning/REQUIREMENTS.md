@@ -9,7 +9,7 @@
 
 - [ ] **BUILD-01**: Build pipeline produces English-only Neo4j schema (camelCase properties, PascalCase labels, SCREAMING_SNAKE_CASE relationships)
 - [ ] **BUILD-02**: Remove Italian-schema dead code from `ingest_stenografici.py` (save_to_neo4j, Italian constraints/indexes)
-- [ ] **BUILD-03**: Extract XML parser class from `ingest_stenografici.py` into standalone module (decouple from save logic)
+- [x] **BUILD-03**: Extract XML parser class from `ingest_stenografici.py` into standalone module (decouple from save logic)
 - [x] **BUILD-04**: Remove redundant Chunk properties (`startCharRaw`, `endCharRaw`) and dead alignment_map code
 - [ ] **BUILD-05**: Remove redundant Speech property (`preprocessedText` — keep only `text` as preprocessed)
 - [ ] **BUILD-06**: Remove redundant Session property (`completeDate` — use only Neo4j Date `date`)
@@ -19,10 +19,10 @@
 
 ### Data Extraction
 
-- [ ] **DATA-01**: Persist Vote nodes (renamed from Votazione) with HAS_VOTE relationship from Debate
-- [ ] **DATA-02**: Extract `<argomenti>` metadata to create Debate-[:DISCUSSES]->ParliamentaryAct edges
-- [ ] **DATA-03**: Extract speaker institutional role from `<emphasis>` tag into Speech.speakingRole property
-- [ ] **DATA-04**: Parse Phase title patterns into Phase.phaseType enum (e.g., "government_opinion", "vote_declaration", "general_discussion")
+- [x] **DATA-01**: Persist Vote nodes (renamed from Votazione) with HAS_VOTE relationship from Debate
+- [x] **DATA-02**: Extract `<argomenti>` metadata to create Debate-[:DISCUSSES]->ParliamentaryAct edges
+- [x] **DATA-03**: Extract speaker institutional role from `<emphasis>` tag into Speech.speakingRole property
+- [x] **DATA-04**: Parse Phase title patterns into Phase.phaseType enum (e.g., "government_opinion", "vote_declaration", "general_discussion")
 
 ### Backend Services
 
@@ -102,17 +102,17 @@
 |-------------|-------|--------|
 | BUILD-01 | Phase 1 | Pending |
 | BUILD-02 | Phase 1 | Pending |
-| BUILD-03 | Phase 1 | Pending |
+| BUILD-03 | Phase 1 | Complete |
 | BUILD-04 | Phase 1 | Complete |
 | BUILD-05 | Phase 1 | Pending |
 | BUILD-06 | Phase 1 | Pending |
 | BUILD-07 | Phase 1 | Pending |
 | BUILD-08 | Phase 1 | Pending |
 | BUILD-09 | Phase 1 | Pending |
-| DATA-01 | Phase 1 | Pending |
-| DATA-02 | Phase 1 | Pending |
-| DATA-03 | Phase 1 | Pending |
-| DATA-04 | Phase 1 | Pending |
+| DATA-01 | Phase 1 | Complete |
+| DATA-02 | Phase 1 | Complete |
+| DATA-03 | Phase 1 | Complete |
+| DATA-04 | Phase 1 | Complete |
 | SVC-01 | Phase 2 | Pending |
 | SVC-02 | Phase 2 | Pending |
 | SVC-03 | Phase 2 | Pending |
