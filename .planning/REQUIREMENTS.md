@@ -60,8 +60,8 @@
 
 ### Graph Enrichment
 
-- [ ] **ENR-01**: SPARQL ingestion from dati.camera.it — per-deputy individual vote records
-- [ ] **ENR-02**: SPARQL ingestion from dati.camera.it — committee officer roles with dates
+- [x] **ENR-01**: SPARQL ingestion from dati.camera.it — per-deputy individual vote records
+- [x] **ENR-02**: SPARQL ingestion from dati.camera.it — committee officer roles with dates
 - [ ] **ENR-03**: NER at ingestion time on chunks — extract LAW and PERSON entity references
 - [ ] **ENR-04**: Store NER results as Chunk properties (lawRefs, personRefs) for entity-filtered retrieval
 
@@ -135,8 +135,8 @@
 | FE-03 | Phase 3 | Complete |
 | RET-01 | Phase 4 | Pending |
 | RET-02 | Phase 4 | Pending |
-| ENR-01 | Phase 4 | Pending |
-| ENR-02 | Phase 4 | Pending |
+| ENR-01 | Phase 4 | Complete |
+| ENR-02 | Phase 4 | Complete |
 | ENR-03 | Phase 4 | Pending |
 | ENR-04 | Phase 4 | Pending |
 

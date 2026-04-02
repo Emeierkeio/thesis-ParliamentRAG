@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 4 context gathered
-last_updated: "2026-04-02T21:17:26.740Z"
+stopped_at: Completed 04-enrichment-02-PLAN.md
+last_updated: "2026-04-02T21:54:41.331Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 6
   completed_phases: 3
-  total_plans: 13
-  completed_plans: 13
+  total_plans: 16
+  completed_plans: 14
   percent: 0
 ---
 
@@ -62,6 +62,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-backend P06 | 15min | 2 tasks | 3 files |
 | Phase 03-frontend P01 | 525623min | 2 tasks | 17 files |
 | Phase 03-frontend P02 | 10min | 2 tasks | 20 files |
+| Phase 04-enrichment P02 | 2min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -101,6 +102,7 @@ Recent decisions affecting current work:
 - [Phase 03-frontend]: GraphRecord = Record<string,unknown> with strProp() helper for type-safe string extraction
 - [Phase 03-frontend]: Wire-format SSE values preserved (maggioranza_percentage, opposizione_percentage, commissioni wire field); only local TypeScript identifiers translated to English
 - [Phase 03-frontend]: CoalitionFilter uses English majority/opposition values; filter predicate maps to wire maggioranza/opposizione
+- [Phase 04-enrichment]: stdlib urllib used for SPARQL HTTP (no requests/httpx dep); IndividualVote.id format iv_{person_id}_{session}_{vote} for MERGE idempotency
 
 ### Roadmap Evolution
 
@@ -119,6 +121,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T21:17:26.737Z
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-enrichment/04-CONTEXT.md
+Last session: 2026-04-02T21:54:41.329Z
+Stopped at: Completed 04-enrichment-02-PLAN.md
+Resume file: None
