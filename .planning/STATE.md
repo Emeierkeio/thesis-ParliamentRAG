@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-build-pipeline-03-PLAN.md
-last_updated: "2026-04-02T10:28:47.759Z"
+stopped_at: Completed 01-build-pipeline-04-PLAN.md
+last_updated: "2026-04-02T10:39:03.784Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 5
-  completed_plans: 3
+  completed_plans: 4
   percent: 0
 ---
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-build-pipeline P02 | 4min | 1 tasks | 5 files |
 | Phase 01-build-pipeline P01 | 13 | 2 tasks | 7 files |
 | Phase 01-build-pipeline P03 | 5 | 2 tasks | 2 files |
+| Phase 01-build-pipeline P04 | 12 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,9 @@ Recent decisions affecting current work:
 - [Phase 01-build-pipeline]: preprocess_text() drops alignment_map return — no alignment_map logic in new codebase
 - [Phase 01-build-pipeline]: DatabaseBuilder accepts an injected neo4j.Driver (no credentials in constructor)
 - [Phase 01-build-pipeline]: load_government_members_from_path added as enriched variant alongside basic load_government_members
+- [Phase 01-04]: csv_loader.py is standalone (no db_builder import) to prevent circular imports
+- [Phase 01-04]: download.py requires explicit xml_dir param — no module-level default for path-agnosticism
+- [Phase 01-04]: build_and_update.py calls load_government_members_from_path (CSV-enriched) for government member creation
 
 ### Pending Todos
 
@@ -86,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T10:28:47.756Z
-Stopped at: Completed 01-build-pipeline-03-PLAN.md
+Last session: 2026-04-02T10:39:03.782Z
+Stopped at: Completed 01-build-pipeline-04-PLAN.md
 Resume file: None
