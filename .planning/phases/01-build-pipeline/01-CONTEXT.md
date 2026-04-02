@@ -39,7 +39,7 @@ Rebuild the database build pipeline from scratch with a clean English-only Neo4j
 - Node label: `Vote`
 - Schema predisposed for individual vote records (Phase 4 SPARQL enrichment will add `IndividualVote` nodes)
 - Properties from XML: `number`, `type`, `subject`, `present`, `voters`, `abstained`, `majority`, `inFavor`, `against`, `onMission`, `outcome`
-- Relationship: `Debate-[:HAS_VOTE]->Vote`
+- Relationship: `Session-[:HAS_VOTE]->Vote` (corrected from Debate — XML places raccoltaVotazioni at session level, confirmed in RESEARCH.md)
 - Parse logic already exists in `parse_votazione()` — wire it into `_save_session_english()`
 
 ### Debate→Act Linking
