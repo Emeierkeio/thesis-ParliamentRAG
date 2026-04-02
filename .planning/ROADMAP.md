@@ -24,10 +24,17 @@ A bottom-up refactoring ordered by the dependency graph: build pipeline first (p
 **Success Criteria** (what must be TRUE):
   1. Running `make db-all` rebuilds the entire database from scratch and completes without errors
   2. The rebuilt database contains no Italian-schema properties (`start_char_raw`, `preprocessed_text`, `complete_date`) and all Chunk/Speech/Session nodes have only the new camelCase property names
-  3. Vote nodes exist in the graph with HAS_VOTE edges from Debate nodes (previously discarded)
+  3. Vote nodes exist in the graph with HAS_VOTE edges from Session nodes (corrected from Debate — votes are session-level in XML)
   4. Debate nodes have DISCUSSES edges to ParliamentaryAct nodes for debates that reference acts in their XML
   5. Speech nodes carry a `speakingRole` property for speeches with an institutional role in the XML
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Extract XML parser and create test infrastructure
+- [ ] 01-02-PLAN.md — Create chunker module and config file
+- [ ] 01-03-PLAN.md — Build database builder with UNWIND batch writes
+- [ ] 01-04-PLAN.md — Wire modules into build_and_update.py entry point
+- [ ] 01-05-PLAN.md — Integration verification against Neo4j
 
 ### Phase 2: Backend
 **Goal**: All backend layers (services, routers, scripts) are clean, correctly typed, and deploy atomically with the new schema — all Cypher consumers updated, business logic extracted into services, dependency injection fixed, cross-layer coupling violations resolved
@@ -71,7 +78,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Build Pipeline | 0/TBD | Not started | - |
+| 1. Build Pipeline | 0/5 | Planning complete | - |
 | 2. Backend | 0/TBD | Not started | - |
 | 3. Frontend | 0/TBD | Not started | - |
 | 4. Enrichment | 0/TBD | Not started | - |
