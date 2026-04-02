@@ -31,7 +31,7 @@
 - [x] **SVC-03**: Extract evaluation business logic into `services/evaluation_service.py` (decouple from router)
 - [x] **SVC-04**: Replace `get_services()` dict with FastAPI `Depends()` typed dependency injection
 - [x] **SVC-05**: Fix search.py duplicate Neo4j connection pool (use shared client from deps.py)
-- [ ] **SVC-06**: Clean naming, type hints, English docstrings across all service modules
+- [x] **SVC-06**: Clean naming, type hints, English docstrings across all service modules
 
 ### Backend API
 
@@ -68,8 +68,8 @@
 ### Code Quality
 
 - [x] **QA-01**: Add smoke tests for critical paths (build pipeline, retrieval, evaluation) — zero current coverage
-- [ ] **QA-02**: Python code follows best practices: type hints, English docstrings, no dead code
-- [ ] **QA-03**: Consistent naming conventions across entire codebase (camelCase Neo4j, snake_case Python, camelCase TypeScript)
+- [x] **QA-02**: Python code follows best practices: type hints, English docstrings, no dead code
+- [x] **QA-03**: Consistent naming conventions across entire codebase (camelCase Neo4j, snake_case Python, camelCase TypeScript)
 
 ## v2 Requirements
 
@@ -118,7 +118,7 @@
 | SVC-03 | Phase 2 | Complete |
 | SVC-04 | Phase 2 | Complete |
 | SVC-05 | Phase 2 | Complete |
-| SVC-06 | Phase 2 | Pending |
+| SVC-06 | Phase 2 | Complete |
 | API-01 | Phase 2 | Complete |
 | API-02 | Phase 2 | Complete |
 | API-03 | Phase 2 | Complete |
@@ -128,8 +128,8 @@
 | SCR-02 | Phase 2 | Complete |
 | SCR-03 | Phase 2 | Complete |
 | QA-01 | Phase 2 | Complete |
-| QA-02 | Phase 2 | Pending |
-| QA-03 | Phase 2 | Pending |
+| QA-02 | Phase 2 | Complete |
+| QA-03 | Phase 2 | Complete |
 | FE-01 | Phase 3 | Pending |
 | FE-02 | Phase 3 | Pending |
 | FE-03 | Phase 3 | Pending |
