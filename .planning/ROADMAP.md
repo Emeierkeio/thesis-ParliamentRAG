@@ -118,12 +118,15 @@ Plans:
 - [ ] 05-02-PLAN.md — Extract all hardcoded Italian UI strings to translation keys
 - [ ] 05-03-PLAN.md — Citation translation wiring (backend + frontend), tooltip, banner, globe icon
 
-### Phase 6: Senate data integration with chamber selector
+### Phase 6: Senate Data Integration
 
-**Goal:** [To be planned]
-**Requirements**: TBD
+**Goal:** The system ingests Senato della Repubblica stenographic records (XIX legislatura) alongside Camera data, with a chamber selector (Camera / Senato / Both) in the UI that filters retrieval queries
+**Requirements**: SEN-01, SEN-02, SEN-03, SEN-04, SEN-05
 **Depends on:** Phase 5
-**Plans:** 2/3 plans executed
-
-Plans:
-- [ ] TBD (run /gsd:plan-phase 6 to break down)
+**Success Criteria** (what must be TRUE):
+  1. Senate stenographic XML files are downloaded and parsed by a dedicated `senate_parser.py`
+  2. Senate Session, Debate, Phase, Speech, Chunk nodes exist in Neo4j with `chamber: "senato"`
+  3. Chamber selector in the UI allows switching between Camera / Senato / Both
+  4. Default "Both" retrieval returns results from both chambers ranked by relevance
+  5. `make db-senate` builds Senate data, `make db-all` builds both
+**Plans**: TBD

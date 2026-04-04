@@ -79,6 +79,14 @@
 - [ ] **ML-04**: Tooltip hover on translated citations showing original Italian text
 - [ ] **ML-05**: Dual-layer disclaimer: dismissable banner + permanent globe icon (🌐) on translated citations
 
+### Senate Data Integration
+
+- [ ] **SEN-01**: Dedicated Senate XML parser (`senate_parser.py`) producing same output format as Camera parser
+- [ ] **SEN-02**: Senate data download and ingestion into Neo4j with `chamber: "senato"` on all nodes
+- [ ] **SEN-03**: Chamber selector UI component (Camera / Senato / Both) above chat input, default "Both"
+- [ ] **SEN-04**: All retrieval channels (dense, sparse, graph) filter by `chamber` when not "Both"
+- [ ] **SEN-05**: `make db-senate` target for Senate-only build, `make db-all` builds both chambers
+
 ## v2 Requirements
 
 ### Advanced Enrichment
