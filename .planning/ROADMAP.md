@@ -135,3 +135,13 @@ Plans:
 - [ ] 06-01-PLAN.md — Senate AKN parser, download script, build_and_update integration, Makefile targets
 - [ ] 06-02-PLAN.md — Backend retrieval chamber filter (all 3 channels + ChatRequest extension)
 - [ ] 06-03-PLAN.md — Frontend ChamberSelector component, wiring to use-chat.ts, locale keys
+
+### Phase 7: Pipeline optimization — analyze and optimize the full retrieval-to-generation pipeline (retrieval, generation, ideological compass) for cost, latency, and quality
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 6
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 7 to break down)
