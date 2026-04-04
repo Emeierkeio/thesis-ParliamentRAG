@@ -71,6 +71,14 @@
 - [x] **QA-02**: Python code follows best practices: type hints, English docstrings, no dead code
 - [x] **QA-03**: Consistent naming conventions across entire codebase (camelCase Neo4j, snake_case Python, camelCase TypeScript)
 
+### Multi-language Support
+
+- [ ] **ML-01**: i18n infrastructure with next-intl or equivalent — Italian (default) + English locale files
+- [ ] **ML-02**: Extract all hardcoded Italian UI text to translation keys across all pages and components
+- [ ] **ML-03**: On-the-fly citation translation via OpenAI when user language ≠ Italian
+- [ ] **ML-04**: Tooltip hover on translated citations showing original Italian text
+- [ ] **ML-05**: Dual-layer disclaimer: dismissable banner + permanent globe icon (🌐) on translated citations
+
 ## v2 Requirements
 
 ### Advanced Enrichment

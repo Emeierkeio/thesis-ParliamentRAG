@@ -100,15 +100,18 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 3. Frontend | 2/2 | Complete    | 2026-04-02 |
 | 4. Enrichment | 2/3 | Complete    | 2026-04-02 |
 
-### Phase 5: Multi-language support with translated citations and original-text hover disclaimer
+### Phase 5: Multi-language Support
 
-**Goal:** [To be planned]
-**Requirements**: TBD
+**Goal:** The application supports Italian (default) and English with i18n infrastructure, parliamentary citations are translated on-the-fly via OpenAI when user language ≠ Italian, tooltip hover shows original Italian text, and a dual-layer disclaimer (banner + globe icon) communicates machine translation
+**Requirements**: ML-01, ML-02, ML-03, ML-04, ML-05
 **Depends on:** Phase 4
-**Plans:** 3/3 plans complete
-
-Plans:
-- [ ] TBD (run /gsd:plan-phase 5 to break down)
+**Success Criteria** (what must be TRUE):
+  1. Language selector allows switching between Italian and English
+  2. All UI text renders correctly in both languages via i18n translation keys
+  3. Citations in non-Italian mode show translated text with original Italian on hover
+  4. Banner disclaimer appears above response area when language ≠ Italian
+  5. Globe icon (🌐) appears on each translated citation
+**Plans**: TBD
 
 ### Phase 6: Senate data integration with chamber selector
 
