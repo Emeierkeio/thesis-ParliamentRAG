@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 05-multi-language-support-01-PLAN.md
-last_updated: "2026-04-04T12:48:31.909Z"
-last_activity: 2026-04-02 — Roadmap created
+stopped_at: Completed 05-multi-language-support-02-PLAN.md
+last_updated: "2026-04-04T14:00:00.000Z"
+last_activity: 2026-04-04 — Phase 05 Plan 02 complete
 progress:
   total_phases: 6
   completed_phases: 4
   total_plans: 19
-  completed_plans: 17
-  percent: 0
+  completed_plans: 18
+  percent: 95
 ---
 
 # Project State
@@ -65,6 +65,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 04-enrichment P02 | 2min | 2 tasks | 3 files |
 | Phase 04-enrichment P01 | 4min | 2 tasks | 8 files |
 | Phase 05-multi-language-support P01 | 18min | 2 tasks | 9 files |
+| Phase 05-multi-language-support P02 | 30min | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -111,6 +112,9 @@ Recent decisions affecting current work:
 - [Phase 05-multi-language-support]: Cookie-based locale (NEXT_LOCALE) selected over [locale] URL routing to avoid mass route migration
 - [Phase 05-multi-language-support]: translate_citation_batch returns original citation unchanged (no translated_* keys) on failure — cleaner fallback than partial dict
 - [Phase 05-multi-language-support]: TRANSLATION_PROMPT instructs model to not translate proper nouns (speaker names, party names, dates, session numbers)
+- [Phase 05-02]: Remove label/description/whyDescription from config.progressSteps; keep only id and icon — locale files are the single source of truth for UI text
+- [Phase 05-02]: Pass tPi as prop to StepResultDetails (sub-function) to avoid hooks-in-non-component violation
+- [Phase 05-02]: Use `as Parameters<typeof tPs>[0]` cast to allow dynamic key construction like `step${id}.label`
 
 ### Roadmap Evolution
 
@@ -129,6 +133,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T12:48:31.906Z
-Stopped at: Completed 05-multi-language-support-01-PLAN.md
+Last session: 2026-04-04T14:00:00.000Z
+Stopped at: Completed 05-multi-language-support-02-PLAN.md
 Resume file: None
