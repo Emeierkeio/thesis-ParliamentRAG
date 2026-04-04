@@ -89,7 +89,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 **Critical Deploy Note:** Phase 1 and Phase 2 must be deployed as a unit. Do not run the Phase 1 rebuilt database against the old (pre-Phase-2) backend — schema properties will return `null` silently.
 
@@ -110,8 +110,13 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
   2. All UI text renders correctly in both languages via i18n translation keys
   3. Citations in non-Italian mode show translated text with original Italian on hover
   4. Banner disclaimer appears above response area when language ≠ Italian
-  5. Globe icon (🌐) appears on each translated citation
-**Plans**: TBD
+  5. Globe icon appears on each translated citation
+**Plans**: 3 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — i18n infrastructure (next-intl, locale files, language selector) + backend translation service
+- [ ] 05-02-PLAN.md — Extract all hardcoded Italian UI strings to translation keys
+- [ ] 05-03-PLAN.md — Citation translation wiring (backend + frontend), tooltip, banner, globe icon
 
 ### Phase 6: Senate data integration with chamber selector
 
