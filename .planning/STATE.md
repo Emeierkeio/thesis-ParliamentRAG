@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 5 context gathered
-last_updated: "2026-04-04T05:41:30.373Z"
+stopped_at: Completed 05-multi-language-support-01-PLAN.md
+last_updated: "2026-04-04T12:48:31.909Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 6
   completed_phases: 4
-  total_plans: 16
-  completed_plans: 16
+  total_plans: 19
+  completed_plans: 17
   percent: 0
 ---
 
@@ -64,6 +64,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03-frontend P02 | 10min | 2 tasks | 20 files |
 | Phase 04-enrichment P02 | 2min | 2 tasks | 3 files |
 | Phase 04-enrichment P01 | 4min | 2 tasks | 8 files |
+| Phase 05-multi-language-support P01 | 18min | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -107,6 +108,9 @@ Recent decisions affecting current work:
 - [Phase 04-enrichment]: RRF replaces weighted scoring in merger: rank-based fusion is parameter-free and cross-channel comparable
 - [Phase 04-enrichment]: similarity=0.5 sentinel for sparse results: BM25 raw scores not comparable to cosine; rank position drives fusion
 - [Phase 04-enrichment]: Italian analyzer with standard fallback in create_fulltext_index: Neo4j Community may not have italian analyzer
+- [Phase 05-multi-language-support]: Cookie-based locale (NEXT_LOCALE) selected over [locale] URL routing to avoid mass route migration
+- [Phase 05-multi-language-support]: translate_citation_batch returns original citation unchanged (no translated_* keys) on failure — cleaner fallback than partial dict
+- [Phase 05-multi-language-support]: TRANSLATION_PROMPT instructs model to not translate proper nouns (speaker names, party names, dates, session numbers)
 
 ### Roadmap Evolution
 
@@ -125,6 +129,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T05:41:30.370Z
-Stopped at: Phase 5 context gathered
-Resume file: .planning/phases/05-multi-language-support-with-translated-citations-and-original-text-hover-disclaimer/05-CONTEXT.md
+Last session: 2026-04-04T12:48:31.906Z
+Stopped at: Completed 05-multi-language-support-01-PLAN.md
+Resume file: None
