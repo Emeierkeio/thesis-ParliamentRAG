@@ -83,7 +83,7 @@
 
 - [x] **SEN-01**: Dedicated Senate XML parser (`senate_parser.py`) producing same output format as Camera parser
 - [x] **SEN-02**: Senate data download and ingestion into Neo4j with `chamber: "senato"` on all nodes
-- [ ] **SEN-03**: Chamber selector UI component (Camera / Senato / Both) above chat input, default "Both"
+- [x] **SEN-03**: Chamber selector UI component (Camera / Senato / Both) above chat input, default "Both"
 - [x] **SEN-04**: All retrieval channels (dense, sparse, graph) filter by `chamber` when not "Both"
 - [x] **SEN-05**: `make db-senate` target for Senate-only build, `make db-all` builds both chambers
 
