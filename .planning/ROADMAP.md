@@ -129,4 +129,9 @@ Plans:
   3. Chamber selector in the UI allows switching between Camera / Senato / Both
   4. Default "Both" retrieval returns results from both chambers ranked by relevance
   5. `make db-senate` builds Senate data, `make db-all` builds both
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Senate AKN parser, download script, build_and_update integration, Makefile targets
+- [ ] 06-02-PLAN.md — Backend retrieval chamber filter (all 3 channels + ChatRequest extension)
+- [ ] 06-03-PLAN.md — Frontend ChamberSelector component, wiring to use-chat.ts, locale keys
