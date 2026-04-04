@@ -145,3 +145,13 @@ Plans:
 
 Plans:
 - [ ] TBD (run /gsd:plan-phase 7 to break down)
+
+### Phase 8: Senate individual vote scraping from senato.it HTML pages
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 7
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 8 to break down)

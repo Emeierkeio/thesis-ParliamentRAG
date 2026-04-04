@@ -131,6 +131,7 @@ Recent decisions affecting current work:
 - Phase 5 added: Multi-language support with translated citations and original-text hover disclaimer
 - Phase 6 added: Senate data integration with chamber selector
 - Phase 7 added: Pipeline optimization — analyze and optimize retrieval-to-generation pipeline for cost, latency, and quality
+- Phase 8 added: Senate individual vote scraping from senato.it HTML pages
 
 ### Pending Todos
 
