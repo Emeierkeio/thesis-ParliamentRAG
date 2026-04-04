@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 6 context gathered
-last_updated: "2026-04-04T14:05:38.123Z"
+stopped_at: Completed 06-senate-data-integration-with-chamber-selector/06-02-PLAN.md
+last_updated: "2026-04-04T15:55:40.487Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 6
   completed_phases: 4
-  total_plans: 19
-  completed_plans: 18
+  total_plans: 22
+  completed_plans: 20
   percent: 0
 ---
 
@@ -66,6 +66,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 04-enrichment P01 | 4min | 2 tasks | 8 files |
 | Phase 05-multi-language-support P01 | 18min | 2 tasks | 9 files |
 | Phase 05-multi-language-support P02 | 30min | 2 tasks | 14 files |
+| Phase 06-senate-data-integration-with-chamber-selector P02 | 4min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -115,6 +116,8 @@ Recent decisions affecting current work:
 - [Phase 05-02]: Remove label/description/whyDescription from config.progressSteps; keep only id and icon — locale files are the single source of truth for UI text
 - [Phase 05-02]: Pass tPi as prop to StepResultDetails (sub-function) to avoid hooks-in-non-component violation
 - [Phase 05-02]: Use `as Parameters<typeof tPs>[0]` cast to allow dynamic key construction like `step${id}.label`
+- [Phase 06-02]: chambers passed as list[str] not enum — each layer defaults to ['camera','senato'] so missing callers still get both chambers with no silent filtering
+- [Phase 06-02]: graph_channel uses session_conditions list (not f-string date_clause append) so chamber condition is always first and no 1=1 workaround needed
 
 ### Roadmap Evolution
 
@@ -133,6 +136,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T14:05:38.120Z
-Stopped at: Phase 6 context gathered
-Resume file: .planning/phases/06-senate-data-integration-with-chamber-selector/06-CONTEXT.md
+Last session: 2026-04-04T15:55:23.247Z
+Stopped at: Completed 06-senate-data-integration-with-chamber-selector/06-02-PLAN.md
+Resume file: None
