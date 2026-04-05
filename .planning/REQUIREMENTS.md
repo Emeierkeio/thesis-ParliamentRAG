@@ -92,9 +92,9 @@
 - [x] **OPT-01**: Automated benchmark harness using evaluation_set.json — captures cost, latency, citation accuracy, section completeness per query
 - [x] **OPT-02**: Generation models swapped to gpt-4.1-mini for analyst, writer, and integrator stages (~12x cost reduction)
 - [x] **OPT-03**: Latency optimizations — query embedding reused from retrieval (no double computation), authority+compass parallelized via asyncio.gather
-- [ ] **OPT-04**: 4th NER entity retrieval channel using Chunk.lawRefs/personRefs for entity-specific queries, gated on entity detection
-- [ ] **OPT-05**: Systematic RRF weight sweep script testing multiple weight combinations against evaluation_set.json ground truth
-- [ ] **OPT-06**: Compass validated with Senate groups — KDE handles sparse groups via min_fragments_for_kde fallback
+- [x] **OPT-04**: 4th NER entity retrieval channel using Chunk.lawRefs/personRefs for entity-specific queries, gated on entity detection
+- [x] **OPT-05**: Systematic RRF weight sweep script testing multiple weight combinations against evaluation_set.json ground truth
+- [x] **OPT-06**: Compass validated with Senate groups — KDE handles sparse groups via min_fragments_for_kde fallback
 - [ ] **OPT-07**: Comprehensive validation test suite confirming all optimizations in place + human quality verification
 
 ## v2 Requirements
@@ -178,9 +178,9 @@
 | OPT-01 | Phase 7 | Complete |
 | OPT-02 | Phase 7 | Complete |
 | OPT-03 | Phase 7 | Complete |
-| OPT-04 | Phase 7 | Pending |
-| OPT-05 | Phase 7 | Pending |
-| OPT-06 | Phase 7 | Pending |
+| OPT-04 | Phase 7 | Complete |
+| OPT-05 | Phase 7 | Complete |
+| OPT-06 | Phase 7 | Complete |
 | OPT-07 | Phase 7 | Pending |
 
 **Coverage:**

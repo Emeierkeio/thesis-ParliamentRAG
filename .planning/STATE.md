@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 07-02-PLAN.md
-last_updated: "2026-04-05T20:40:50.906Z"
+stopped_at: Completed 07-03-PLAN.md
+last_updated: "2026-04-05T20:42:04.030Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 8
   completed_phases: 6
   total_plans: 26
-  completed_plans: 24
+  completed_plans: 25
   percent: 0
 ---
 
@@ -72,6 +72,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 05-multi-language-support P03 | 5 | 2 tasks | 7 files |
 | Phase 07-pipeline-optimization P01 | 18min | 2 tasks | 4 files |
 | Phase 07-pipeline-optimization P02 | 8min | 2 tasks | 4 files |
+| Phase 07-pipeline-optimization P03 | 10min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -135,6 +136,9 @@ Recent decisions affecting current work:
 - [Phase 07-02]: gpt-4.1-mini selected for all three generation stages — ~12x cost reduction vs gpt-4o
 - [Phase 07-02]: query_embedding reused from retrieval_result dict — eliminates ~300ms embed_query call per request
 - [Phase 07-02]: asyncio.gather for authority+compass — both CPU-bound with no mutual dependency, safe to parallelize
+- [Phase 07-03]: NERChannel gated on entity_filter (non-empty) so it never fires for generic queries — avoids latency penalty
+- [Phase 07-03]: ner_weight=0.9 (second highest after dense=1.0) — entity matches are precision signals in RRF
+- [Phase 07-03]: rrf_sweep.py overrides config in-memory, never writes to disk — safe for concurrent use
 
 ### Roadmap Evolution
 
@@ -155,6 +159,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-05T20:40:50.903Z
-Stopped at: Completed 07-02-PLAN.md
+Last session: 2026-04-05T20:42:04.027Z
+Stopped at: Completed 07-03-PLAN.md
 Resume file: None
