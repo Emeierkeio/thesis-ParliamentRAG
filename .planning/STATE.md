@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 06-03-PLAN.md
-last_updated: "2026-04-04T16:03:57.040Z"
+stopped_at: "Completed 05-03-PLAN.md (awaiting checkpoint: human verification)"
+last_updated: "2026-04-05T19:34:23.778Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
-  total_phases: 6
-  completed_phases: 5
+  total_phases: 8
+  completed_phases: 6
   total_plans: 22
-  completed_plans: 21
+  completed_plans: 22
   percent: 0
 ---
 
@@ -69,6 +69,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 06-senate-data-integration-with-chamber-selector P02 | 4min | 2 tasks | 6 files |
 | Phase 06-senate-data-integration-with-chamber-selector P01 | 4 | 2 tasks | 6 files |
 | Phase 06-senate-data-integration-with-chamber-selector P03 | 6 | 2 tasks | 6 files |
+| Phase 05-multi-language-support P03 | 5 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -125,6 +126,8 @@ Recent decisions affecting current work:
 - [Phase 06-01]: Flat AKN structure: each debateSection maps to 1 debate + 1 phase (no sub-phases in Senate XML)
 - [Phase 06-03]: ChamberSelector placed in sticky header below ChatInput row, right-aligned — visible on every message state
 - [Phase 06-03]: chamber/onChamberChange props added to ChatArea (not managed internally) — follows existing prop-down pattern
+- [Phase 05-03]: ChatRequest.locale injected by chat_endpoint from http_request.headers (not sent by client in body) — clean separation between transport and business logic
+- [Phase 05-03]: TranslationBanner starts dismissed=true to avoid hydration flash, reads localStorage in useEffect
 
 ### Roadmap Evolution
 
@@ -145,6 +148,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-04T16:00:05.777Z
-Stopped at: Completed 06-03-PLAN.md
+Last session: 2026-04-05T19:34:23.775Z
+Stopped at: Completed 05-03-PLAN.md (awaiting checkpoint: human verification)
 Resume file: None
