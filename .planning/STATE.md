@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 07-01-PLAN.md
-last_updated: "2026-04-05T20:34:29.670Z"
+stopped_at: Completed 07-02-PLAN.md
+last_updated: "2026-04-05T20:40:50.906Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 8
   completed_phases: 6
   total_plans: 26
-  completed_plans: 23
+  completed_plans: 24
   percent: 0
 ---
 
@@ -71,6 +71,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 06-senate-data-integration-with-chamber-selector P03 | 6 | 2 tasks | 6 files |
 | Phase 05-multi-language-support P03 | 5 | 2 tasks | 7 files |
 | Phase 07-pipeline-optimization P01 | 18min | 2 tasks | 4 files |
+| Phase 07-pipeline-optimization P02 | 8min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -131,6 +132,9 @@ Recent decisions affecting current work:
 - [Phase 05-03]: TranslationBanner starts dismissed=true to avoid hydration flash, reads localStorage in useEffect
 - [Phase 07-01]: retrieve_sync returns query_embedding in result dict — non-breaking, enables Plan 02 to skip duplicate embed_query call
 - [Phase 07-01]: baseline_before_opt.json written as placeholder in NumPy 2.x local env; real benchmark run via Docker
+- [Phase 07-02]: gpt-4.1-mini selected for all three generation stages — ~12x cost reduction vs gpt-4o
+- [Phase 07-02]: query_embedding reused from retrieval_result dict — eliminates ~300ms embed_query call per request
+- [Phase 07-02]: asyncio.gather for authority+compass — both CPU-bound with no mutual dependency, safe to parallelize
 
 ### Roadmap Evolution
 
@@ -151,6 +155,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-05T20:34:29.667Z
-Stopped at: Completed 07-01-PLAN.md
+Last session: 2026-04-05T20:40:50.903Z
+Stopped at: Completed 07-02-PLAN.md
 Resume file: None
