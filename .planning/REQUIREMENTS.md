@@ -77,7 +77,7 @@
 - [x] **ML-02**: Extract all hardcoded Italian UI text to translation keys across all pages and components
 - [x] **ML-03**: On-the-fly citation translation via OpenAI when user language ≠ Italian
 - [x] **ML-04**: Tooltip hover on translated citations showing original Italian text
-- [x] **ML-05**: Dual-layer disclaimer: dismissable banner + permanent globe icon (🌐) on translated citations
+- [x] **ML-05**: Dual-layer disclaimer: dismissable banner + permanent globe icon on translated citations
 
 ### Senate Data Integration
 
@@ -87,6 +87,16 @@
 - [x] **SEN-04**: All retrieval channels (dense, sparse, graph) filter by `chamber` when not "Both"
 - [x] **SEN-05**: `make db-senate` target for Senate-only build, `make db-all` builds both chambers
 
+### Pipeline Optimization
+
+- [ ] **OPT-01**: Automated benchmark harness using evaluation_set.json — captures cost, latency, citation accuracy, section completeness per query
+- [ ] **OPT-02**: Generation models swapped to gpt-4.1-mini for analyst, writer, and integrator stages (~12x cost reduction)
+- [ ] **OPT-03**: Latency optimizations — query embedding reused from retrieval (no double computation), authority+compass parallelized via asyncio.gather
+- [ ] **OPT-04**: 4th NER entity retrieval channel using Chunk.lawRefs/personRefs for entity-specific queries, gated on entity detection
+- [ ] **OPT-05**: Systematic RRF weight sweep script testing multiple weight combinations against evaluation_set.json ground truth
+- [ ] **OPT-06**: Compass validated with Senate groups — KDE handles sparse groups via min_fragments_for_kde fallback
+- [ ] **OPT-07**: Comprehensive validation test suite confirming all optimizations in place + human quality verification
+
 ## v2 Requirements
 
 ### Advanced Enrichment
@@ -94,7 +104,7 @@
 - **ENR-V2-01**: Wikidata biographical enrichment for deputies
 - **ENR-V2-02**: Normattiva.it ELI URI linking for enacted laws
 - **ENR-V2-03**: Entity linking (map mentions to knowledge base IDs via ReLiK)
-- **ENR-V2-04**: Citation graph (Speech→ParliamentaryAct explicit references)
+- **ENR-V2-04**: Citation graph (Speech->ParliamentaryAct explicit references)
 
 ### Retrieval
 
@@ -155,12 +165,29 @@
 | ENR-02 | Phase 4 | Complete |
 | ENR-03 | Phase 4 | Pending |
 | ENR-04 | Phase 4 | Pending |
+| ML-01 | Phase 5 | Complete |
+| ML-02 | Phase 5 | Complete |
+| ML-03 | Phase 5 | Complete |
+| ML-04 | Phase 5 | Complete |
+| ML-05 | Phase 5 | Complete |
+| SEN-01 | Phase 6 | Complete |
+| SEN-02 | Phase 6 | Complete |
+| SEN-03 | Phase 6 | Complete |
+| SEN-04 | Phase 6 | Complete |
+| SEN-05 | Phase 6 | Complete |
+| OPT-01 | Phase 7 | Pending |
+| OPT-02 | Phase 7 | Pending |
+| OPT-03 | Phase 7 | Pending |
+| OPT-04 | Phase 7 | Pending |
+| OPT-05 | Phase 7 | Pending |
+| OPT-06 | Phase 7 | Pending |
+| OPT-07 | Phase 7 | Pending |
 
 **Coverage:**
-- v1 requirements: 39 total
-- Mapped to phases: 39
+- v1 requirements: 46 total
+- Mapped to phases: 46
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-02*
-*Last updated: 2026-04-02 — Traceability updated to match 4-phase coarse roadmap*
+*Last updated: 2026-04-05 — Added OPT-01..OPT-07 for Phase 7 pipeline optimization*

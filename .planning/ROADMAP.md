@@ -89,7 +89,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 **Critical Deploy Note:** Phase 1 and Phase 2 must be deployed as a unit. Do not run the Phase 1 rebuilt database against the old (pre-Phase-2) backend — schema properties will return `null` silently.
 
@@ -136,15 +136,26 @@ Plans:
 - [ ] 06-02-PLAN.md — Backend retrieval chamber filter (all 3 channels + ChatRequest extension)
 - [ ] 06-03-PLAN.md — Frontend ChamberSelector component, wiring to use-chat.ts, locale keys
 
-### Phase 7: Pipeline optimization — analyze and optimize the full retrieval-to-generation pipeline (retrieval, generation, ideological compass) for cost, latency, and quality
+### Phase 7: Pipeline Optimization
 
-**Goal:** [To be planned]
-**Requirements**: TBD
+**Goal:** The full retrieval-to-generation pipeline is optimized for cost, latency, and quality: generation models swapped to gpt-4.1-mini (~12x cost reduction), query embedding reused (no double computation), authority+compass parallelized, 4th NER entity channel added, RRF weights swept, and all changes validated by automated benchmarks against evaluation_set.json ground truth
+**Requirements**: OPT-01, OPT-02, OPT-03, OPT-04, OPT-05, OPT-06, OPT-07
 **Depends on:** Phase 6
-**Plans:** 3/3 plans complete
+**Success Criteria** (what must be TRUE):
+  1. Generation models (analyst, writer, integrator) use gpt-4.1-mini instead of gpt-4o
+  2. Query embedding computed once per request (retrieval returns it, authority/compass reuse it)
+  3. Authority scoring and compass run in parallel via asyncio.gather
+  4. NER entity channel retrieves chunks by lawRefs/personRefs match for entity-specific queries
+  5. RRF merger supports 4 channels (dense, sparse, graph, ner) with configurable weights
+  6. Benchmark script captures cost, latency, citation accuracy, section completeness per query
+  7. Pipeline quality verified by human against gpt-4o baseline
+**Plans**: 4 plans
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 7 to break down)
+- [ ] 07-01-PLAN.md — Benchmark infrastructure + query embedding reuse in engine.py
+- [ ] 07-02-PLAN.md — Model swap to gpt-4.1-mini + latency optimizations (embedding reuse in routers, parallel authority+compass)
+- [ ] 07-03-PLAN.md — NER entity channel + RRF weight sweep + compass Senate validation
+- [ ] 07-04-PLAN.md — Comprehensive validation test suite + human quality verification
 
 ### Phase 8: Senate individual vote scraping from senato.it HTML pages
 
