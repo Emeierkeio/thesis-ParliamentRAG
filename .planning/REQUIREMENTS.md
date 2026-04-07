@@ -36,7 +36,7 @@
 ### Backend API
 
 - [x] **API-01**: Refactor routers to thin wrappers around services (no business logic in routers)
-- [x] **API-02**: Fix cross-router import violations (evaluation.py→survey.py, seed script→chat.py)
+- [x] **API-02**: Fix cross-router import violations (evaluation.py->survey.py, seed script->chat.py)
 - [x] **API-03**: Freeze SSE event contract (document all 18 yield sites, ensure no behavioral changes)
 - [x] **API-04**: Clean endpoint naming, Pydantic v2 models, consistent error handling
 - [x] **API-05**: Preserve API response shapes (frontend contract must not break)
@@ -75,7 +75,7 @@
 
 - [x] **ML-01**: i18n infrastructure with next-intl or equivalent — Italian (default) + English locale files
 - [x] **ML-02**: Extract all hardcoded Italian UI text to translation keys across all pages and components
-- [x] **ML-03**: On-the-fly citation translation via OpenAI when user language ≠ Italian
+- [x] **ML-03**: On-the-fly citation translation via OpenAI when user language != Italian
 - [x] **ML-04**: Tooltip hover on translated citations showing original Italian text
 - [x] **ML-05**: Dual-layer disclaimer: dismissable banner + permanent globe icon on translated citations
 
@@ -96,6 +96,17 @@
 - [x] **OPT-05**: Systematic RRF weight sweep script testing multiple weight combinations against evaluation_set.json ground truth
 - [x] **OPT-06**: Compass validated with Senate groups — KDE handles sparse groups via min_fragments_for_kde fallback
 - [x] **OPT-07**: Comprehensive validation test suite confirming all optimizations in place + human quality verification
+
+### Parliamentary Timeline
+
+- [ ] **TL-01**: Build-time AI summary generation script (`generate_summaries.py`) — generates IT+EN recaps for Sessions, Debates, and per-debate speaker summaries, stored as Neo4j properties (Session.recapIt/recapEn, Debate.recapIt/recapEn, SpeakerDebateSummary node)
+- [ ] **TL-02**: Makefile targets `make generate-summaries` (resumable, with DRY_RUN support) and `make db-full` (db-all + generate-summaries)
+- [ ] **TL-03**: Three REST endpoints: GET /api/timeline (paginated session list with cursor), GET /api/timeline/debates/{id} (debate detail), GET /api/timeline/speakers/{debateId}/{speakerId} (speaker summary)
+- [ ] **TL-04**: Timeline API supports chamber filtering, keyword search (debate titles + recap text + speaker names), and date range filtering
+- [ ] **TL-05**: Timeline API returns locale-appropriate recap (recapIt or recapEn) based on Accept-Language header
+- [ ] **TL-06**: Browsable /timeline page with collapsible session cards, expandable debate details, infinite scroll, search, and date range filters
+- [ ] **TL-07**: i18n keys for all timeline UI text in both IT and EN locale files, sidebar navigation link with CalendarDays icon
+- [ ] **TL-08**: Per-debate speaker summaries: speaker rows with name, party badge, role badge, government shield, expandable lazy-loaded AI position summary
 
 ## v2 Requirements
 
@@ -182,12 +193,20 @@
 | OPT-05 | Phase 7 | Complete |
 | OPT-06 | Phase 7 | Complete |
 | OPT-07 | Phase 7 | Complete |
+| TL-01 | Phase 9 | Pending |
+| TL-02 | Phase 9 | Pending |
+| TL-03 | Phase 9 | Pending |
+| TL-04 | Phase 9 | Pending |
+| TL-05 | Phase 9 | Pending |
+| TL-06 | Phase 9 | Pending |
+| TL-07 | Phase 9 | Pending |
+| TL-08 | Phase 9 | Pending |
 
 **Coverage:**
-- v1 requirements: 46 total
-- Mapped to phases: 46
+- v1 requirements: 54 total
+- Mapped to phases: 54
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-02*
-*Last updated: 2026-04-05 — Added OPT-01..OPT-07 for Phase 7 pipeline optimization*
+*Last updated: 2026-04-07 — Added TL-01..TL-08 for Phase 9 parliamentary timeline*

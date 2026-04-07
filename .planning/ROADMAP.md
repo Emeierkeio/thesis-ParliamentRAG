@@ -89,7 +89,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 
 **Critical Deploy Note:** Phase 1 and Phase 2 must be deployed as a unit. Do not run the Phase 1 rebuilt database against the old (pre-Phase-2) backend — schema properties will return `null` silently.
 
@@ -102,14 +102,14 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 ### Phase 5: Multi-language Support
 
-**Goal:** The application supports Italian (default) and English with i18n infrastructure, parliamentary citations are translated on-the-fly via OpenAI when user language ≠ Italian, tooltip hover shows original Italian text, and a dual-layer disclaimer (banner + globe icon) communicates machine translation
+**Goal:** The application supports Italian (default) and English with i18n infrastructure, parliamentary citations are translated on-the-fly via OpenAI when user language != Italian, tooltip hover shows original Italian text, and a dual-layer disclaimer (banner + globe icon) communicates machine translation
 **Requirements**: ML-01, ML-02, ML-03, ML-04, ML-05
 **Depends on:** Phase 4
 **Success Criteria** (what must be TRUE):
   1. Language selector allows switching between Italian and English
   2. All UI text renders correctly in both languages via i18n translation keys
   3. Citations in non-Italian mode show translated text with original Italian on hover
-  4. Banner disclaimer appears above response area when language ≠ Italian
+  4. Banner disclaimer appears above response area when language != Italian
   5. Globe icon appears on each translated citation
 **Plans**: 3 plans
 
@@ -169,10 +169,22 @@ Plans:
 
 ### Phase 9: Parliamentary timeline with daily debates recap and per-debate speaker summaries
 
-**Goal:** [To be planned]
-**Requirements**: TBD
+**Goal:** A browsable parliamentary timeline at /timeline showing daily session recaps with AI-generated summaries, per-debate breakdown with phase structure and speaker lists, and per-debate speaker position summaries. Pre-computed at build time via `make generate-summaries`, with keyword search, date range filtering, and chamber selection.
+**Requirements**: TL-01, TL-02, TL-03, TL-04, TL-05, TL-06, TL-07, TL-08
 **Depends on:** Phase 8
-**Plans:** 0 plans
+**Success Criteria** (what must be TRUE):
+  1. `make generate-summaries` generates IT+EN recaps for sessions, debates, and speaker summaries stored as Neo4j properties
+  2. `make generate-summaries DRY_RUN=1` prints estimated costs without writing
+  3. GET /api/timeline returns paginated session list with debate titles, stats, and AI recaps
+  4. GET /api/timeline/debates/{id} returns debate detail with phases, speakers, votes, and acts
+  5. GET /api/timeline/speakers/{debateId}/{speakerId} returns speaker AI position summary
+  6. /timeline page renders with collapsible session cards, search, date range, chamber filter, and infinite scroll
+  7. Sidebar shows "Parliamentary Timeline" link with CalendarDays icon
+**Plans**: 5 plans
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 9 to break down)
+- [ ] 09-01-PLAN.md — Summary generation script + Makefile targets
+- [ ] 09-02-PLAN.md — Backend Pydantic models, timeline service, router, and smoke tests
+- [ ] 09-03-PLAN.md — Frontend types, API client, use-timeline hook, i18n keys
+- [ ] 09-04-PLAN.md — Frontend components (SessionCard, DebateDetail, SpeakerRow, TimelineSearch, TimelineSkeleton)
+- [ ] 09-05-PLAN.md — Timeline page assembly, sidebar integration, end-to-end verification
