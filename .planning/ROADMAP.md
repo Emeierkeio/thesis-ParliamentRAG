@@ -89,7 +89,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11
 
 **Critical Deploy Note:** Phase 1 and Phase 2 must be deployed as a unit. Do not run the Phase 1 rebuilt database against the old (pre-Phase-2) backend — schema properties will return `null` silently.
 
@@ -191,10 +191,34 @@ Plans:
 
 ### Phase 10: Debate transcript viewer with contextual chatbot
 
+**Goal:** A dedicated transcript page at /transcript/{debateId} showing the full stenographic record as a per-speech accordion in chronological order with phase divider headers, alongside a contextual chatbot panel that answers questions scoped exclusively to that debate's content with inline citations that scroll to and highlight the referenced speech. Includes floating mini-map, text selection-to-ask, in-transcript search, deep-linkable speeches, and mobile bottom sheet chatbot.
+**Requirements**: TR-01, TR-02, TR-03, TR-04, TR-05, TR-06, TR-07, TR-08, TR-09, TR-10, TR-11, TR-12, TR-13, TR-14, TR-15
+**Depends on:** Phase 9
+**Success Criteria** (what must be TRUE):
+  1. /transcript/{debateId} renders a two-panel page: transcript (60% left) and chatbot (40% right)
+  2. GET /api/transcript/{debateId}/speeches returns all speeches chronologically with speaker metadata
+  3. POST /api/transcript/{debateId}/chat streams debate-scoped RAG answers via SSE with citation references
+  4. Clicking a chatbot citation [N] scrolls the transcript to that speech and highlights it
+  5. Selecting text in the transcript shows a floating "Ask about this" button that pre-fills the chatbot
+  6. In-transcript search highlights matches with count and up/down navigation
+  7. Deep links /transcript/{debateId}#speech-{speechId} auto-expand and scroll to the target speech
+  8. DebateDetail (timeline) shows a "Read transcript" button linking to /transcript/{debateId}
+**Plans**: 6 plans
+
+Plans:
+- [ ] 10-01-PLAN.md — Backend Pydantic models, transcript service, and router (speeches, speech text, suggestions)
+- [ ] 10-02-PLAN.md — Frontend types, API client, i18n keys, sidebar active state fix
+- [ ] 10-03-PLAN.md — Backend debate-scoped chatbot SSE endpoint
+- [ ] 10-04-PLAN.md — Frontend transcript page, TranscriptPanel, SpeechRow, PhaseHeader
+- [ ] 10-05-PLAN.md — Frontend TranscriptSearch and TranscriptMiniMap
+- [ ] 10-06-PLAN.md — Frontend chatbot panel, useTranscriptChat hook, SelectionAskButton, DebateDetail entry point, end-to-end verification
+
+### Phase 11: Fix XML parser to extract all speeches from debates
+
 **Goal:** [To be planned]
 **Requirements**: TBD
-**Depends on:** Phase 9
+**Depends on:** Phase 10
 **Plans:** 0 plans
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 10 to break down)
+- [ ] TBD (run /gsd:plan-phase 11 to break down)
