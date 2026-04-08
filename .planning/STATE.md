@@ -163,6 +163,7 @@ Recent decisions affecting current work:
 - Phase 7 added: Pipeline optimization — analyze and optimize retrieval-to-generation pipeline for cost, latency, and quality
 - Phase 8 added: Senate individual vote scraping from senato.it HTML pages
 - Phase 9 added: Parliamentary timeline with daily debates recap and per-debate speaker summaries
+- Phase 10 added: Debate transcript viewer with contextual chatbot
 
 ### Pending Todos
 

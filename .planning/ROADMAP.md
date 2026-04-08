@@ -89,7 +89,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 
 **Critical Deploy Note:** Phase 1 and Phase 2 must be deployed as a unit. Do not run the Phase 1 rebuilt database against the old (pre-Phase-2) backend — schema properties will return `null` silently.
 
@@ -188,3 +188,13 @@ Plans:
 - [ ] 09-03-PLAN.md — Frontend types, API client, use-timeline hook, i18n keys
 - [ ] 09-04-PLAN.md — Frontend components (SessionCard, DebateDetail, SpeakerRow, TimelineSearch, TimelineSkeleton)
 - [ ] 09-05-PLAN.md — Timeline page assembly, sidebar integration, end-to-end verification
+
+### Phase 10: Debate transcript viewer with contextual chatbot
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 9
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 10 to break down)
