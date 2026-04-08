@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 09-03-PLAN.md (frontend data layer)
-last_updated: "2026-04-08T01:55:28.775Z"
+stopped_at: Completed 09-04-PLAN.md (timeline UI components)
+last_updated: "2026-04-08T01:59:28.587Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 9
   completed_phases: 7
   total_plans: 31
-  completed_plans: 29
+  completed_plans: 30
   percent: 0
 ---
 
@@ -77,6 +77,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 09-parliamentary-timeline P01 | 8min | 2 tasks | 3 files |
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P02 | 2min | 2 tasks | 5 files |
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P03 | 2min | 2 tasks | 5 files |
+| Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P04 | 15 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -150,6 +151,8 @@ Recent decisions affecting current work:
 - [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: Search uses EXISTS subquery at session WHERE level to return session-level results when any debate matches (titles, recap, speaker names)
 - [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: Votes queried via Session path (Debate←HAS_DEBATE—Session—HAS_VOTE→Vote) per Phase 1 schema design
 - [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: React 19 useRef compatibility: use RefObject<T | null> and initialize timeout ref to undefined
+- [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: skeleton.tsx installed via npx shadcn add skeleton (was missing from ui components)
+- [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: DebateDetail uses useEffect on mount since it is already rendered inside a parent Collapsible's CollapsibleContent
 
 ### Roadmap Evolution
 
@@ -171,6 +174,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T01:55:28.773Z
-Stopped at: Completed 09-03-PLAN.md (frontend data layer)
+Last session: 2026-04-08T01:59:24.195Z
+Stopped at: Completed 09-04-PLAN.md (timeline UI components)
 Resume file: None
