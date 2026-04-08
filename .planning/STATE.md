@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 09-04-PLAN.md (timeline UI components)
-last_updated: "2026-04-08T01:59:28.587Z"
+stopped_at: "Completed 09-05-PLAN.md task 1 — checkpoint:human-verify pending for task 2"
+last_updated: "2026-04-08T02:03:01.237Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 9
-  completed_phases: 7
+  completed_phases: 8
   total_plans: 31
-  completed_plans: 30
+  completed_plans: 31
   percent: 0
 ---
 
@@ -78,6 +78,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P02 | 2min | 2 tasks | 5 files |
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P03 | 2min | 2 tasks | 5 files |
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P04 | 15 | 2 tasks | 6 files |
+| Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P05 | 2 | 1 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -153,6 +154,7 @@ Recent decisions affecting current work:
 - [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: React 19 useRef compatibility: use RefObject<T | null> and initialize timeout ref to undefined
 - [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: skeleton.tsx installed via npx shadcn add skeleton (was missing from ui components)
 - [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: DebateDetail uses useEffect on mount since it is already rendered inside a parent Collapsible's CollapsibleContent
+- [Phase 09-05]: ChamberSelector uses value/onChange props (not chamber/onChamberChange as plan stated) — cast filters.chamber as ChamberValue at call site
 
 ### Roadmap Evolution
 
@@ -174,6 +176,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T01:59:24.195Z
-Stopped at: Completed 09-04-PLAN.md (timeline UI components)
+Last session: 2026-04-08T02:03:01.234Z
+Stopped at: Completed 09-05-PLAN.md task 1 — checkpoint:human-verify pending for task 2
 Resume file: None
