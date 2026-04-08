@@ -104,8 +104,8 @@
 - [x] **TL-03**: Three REST endpoints: GET /api/timeline (paginated session list with cursor), GET /api/timeline/debates/{id} (debate detail), GET /api/timeline/speakers/{debateId}/{speakerId} (speaker summary)
 - [x] **TL-04**: Timeline API supports chamber filtering, keyword search (debate titles + recap text + speaker names), and date range filtering
 - [x] **TL-05**: Timeline API returns locale-appropriate recap (recapIt or recapEn) based on Accept-Language header
-- [ ] **TL-06**: Browsable /timeline page with collapsible session cards, expandable debate details, infinite scroll, search, and date range filters
-- [ ] **TL-07**: i18n keys for all timeline UI text in both IT and EN locale files, sidebar navigation link with CalendarDays icon
+- [x] **TL-06**: Browsable /timeline page with collapsible session cards, expandable debate details, infinite scroll, search, and date range filters
+- [x] **TL-07**: i18n keys for all timeline UI text in both IT and EN locale files, sidebar navigation link with CalendarDays icon
 - [ ] **TL-08**: Per-debate speaker summaries: speaker rows with name, party badge, role badge, government shield, expandable lazy-loaded AI position summary
 
 ## v2 Requirements
@@ -198,8 +198,8 @@
 | TL-03 | Phase 9 | Complete |
 | TL-04 | Phase 9 | Complete |
 | TL-05 | Phase 9 | Complete |
-| TL-06 | Phase 9 | Pending |
-| TL-07 | Phase 9 | Pending |
+| TL-06 | Phase 9 | Complete |
+| TL-07 | Phase 9 | Complete |
 | TL-08 | Phase 9 | Pending |
 
 **Coverage:**
