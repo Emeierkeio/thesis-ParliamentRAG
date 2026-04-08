@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 10-03-PLAN.md
-last_updated: "2026-04-08T12:22:29.821Z"
+stopped_at: Completed 10-04-PLAN.md
+last_updated: "2026-04-08T12:23:34.363Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 11
   completed_phases: 8
   total_plans: 37
-  completed_plans: 35
+  completed_plans: 36
   percent: 0
 ---
 
@@ -83,6 +83,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P01 | 8min | 2 tasks | 4 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P05 | 2 | 2 tasks | 2 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P03 | 5min | 2 tasks | 3 files |
+| Phase 10-debate-transcript-viewer-with-contextual-chatbot P04 | 2min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -169,6 +170,9 @@ Recent decisions affecting current work:
 - [Phase 10-03]: debate_chat_streaming runs independently of _pipeline_semaphore — per-debate scope is isolated from the global query pipeline
 - [Phase 10-03]: top_k=100 for vector index query to ensure enough debate-specific chunks survive the debate_id MATCH filter, then LIMIT 15 final
 - [Phase 10-03]: Citations yielded as dedicated SSE event before text streaming — frontend can render citation panel without waiting for full answer
+- [Phase 10-04]: page.tsx, TranscriptPanel.tsx, globals.css committed by Plan 05 scaffolding (823a603) — plans ran out of sequence, content matched spec exactly
+- [Phase 10-04]: SpeechRow uses controlled Collapsible (isOpen/onOpenChange) — TranscriptPanel holds openSpeechId centrally for accordion behavior
+- [Phase 10-04]: PhaseHeader includes data-phase-id and TranscriptPanel includes targetSpeechId/onTargetConsumed from the start to avoid cross-plan file conflicts
 
 ### Roadmap Evolution
 
@@ -191,6 +195,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T12:22:29.817Z
-Stopped at: Completed 10-03-PLAN.md
+Last session: 2026-04-08T12:23:34.360Z
+Stopped at: Completed 10-04-PLAN.md
 Resume file: None
