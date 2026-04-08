@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 10-01-PLAN.md
-last_updated: "2026-04-08T12:18:13.517Z"
+stopped_at: Completed 10-05-PLAN.md
+last_updated: "2026-04-08T12:22:21.732Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 11
   completed_phases: 8
   total_plans: 37
-  completed_plans: 33
+  completed_plans: 35
   percent: 0
 ---
 
@@ -81,6 +81,8 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P05 | 2 | 1 tasks | 4 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P02 | 6 | 2 tasks | 5 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P01 | 8min | 2 tasks | 4 files |
+| Phase 10-debate-transcript-viewer-with-contextual-chatbot P05 | 2 | 2 tasks | 2 files |
+| Phase 10-debate-transcript-viewer-with-contextual-chatbot P03 | 5min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -161,6 +163,9 @@ Recent decisions affecting current work:
 - [Phase 10-02]: Transcript i18n namespace placed as sibling to Timeline in both locale files with 26 keys
 - [Phase 10-debate-transcript-viewer-with-contextual-chatbot]: Italian recap (recapIt) used as universal fallback when locale-specific recap is absent in get_debate_suggestions — avoids empty suggestions for debates only indexed in Italian
 - [Phase 10-debate-transcript-viewer-with-contextual-chatbot]: Lazy speech text endpoint: /speech/{id} fetched on accordion expand, not on page load
+- [Phase 10-05]: Minimum 2 characters threshold before TranscriptSearch triggers to avoid excessive DOM manipulation on single-char noise
+- [Phase 10-05]: TranscriptMiniMap delays IntersectionObserver setup by 500ms for speech accordion DOM to stabilize after lazy load
+- [Phase 10-05]: DOM TreeWalker pattern for in-transcript search: collect text nodes, split and wrap matches in <mark data-search-highlight>, cleanup by replacing marks with text nodes and normalize()
 
 ### Roadmap Evolution
 
@@ -183,6 +188,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T12:18:13.514Z
-Stopped at: Completed 10-01-PLAN.md
+Last session: 2026-04-08T12:22:05.883Z
+Stopped at: Completed 10-05-PLAN.md
 Resume file: None
