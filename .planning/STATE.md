@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 10-05-PLAN.md
-last_updated: "2026-04-08T12:22:21.732Z"
+stopped_at: Completed 10-03-PLAN.md
+last_updated: "2026-04-08T12:22:29.821Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 11
@@ -166,6 +166,9 @@ Recent decisions affecting current work:
 - [Phase 10-05]: Minimum 2 characters threshold before TranscriptSearch triggers to avoid excessive DOM manipulation on single-char noise
 - [Phase 10-05]: TranscriptMiniMap delays IntersectionObserver setup by 500ms for speech accordion DOM to stabilize after lazy load
 - [Phase 10-05]: DOM TreeWalker pattern for in-transcript search: collect text nodes, split and wrap matches in <mark data-search-highlight>, cleanup by replacing marks with text nodes and normalize()
+- [Phase 10-03]: debate_chat_streaming runs independently of _pipeline_semaphore — per-debate scope is isolated from the global query pipeline
+- [Phase 10-03]: top_k=100 for vector index query to ensure enough debate-specific chunks survive the debate_id MATCH filter, then LIMIT 15 final
+- [Phase 10-03]: Citations yielded as dedicated SSE event before text streaming — frontend can render citation panel without waiting for full answer
 
 ### Roadmap Evolution
 
@@ -188,6 +191,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T12:22:05.883Z
-Stopped at: Completed 10-05-PLAN.md
+Last session: 2026-04-08T12:22:29.817Z
+Stopped at: Completed 10-03-PLAN.md
 Resume file: None
