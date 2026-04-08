@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 9 UI-SPEC approved
-last_updated: "2026-04-07T21:15:09.611Z"
+stopped_at: Completed 09-01-PLAN.md
+last_updated: "2026-04-08T01:51:10.040Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 9
   completed_phases: 7
-  total_plans: 26
-  completed_plans: 26
+  total_plans: 31
+  completed_plans: 27
   percent: 0
 ---
 
@@ -74,6 +74,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 07-pipeline-optimization P02 | 8min | 2 tasks | 4 files |
 | Phase 07-pipeline-optimization P03 | 10min | 2 tasks | 6 files |
 | Phase 07-pipeline-optimization P04 | 5min | 1 tasks | 1 files |
+| Phase 09-parliamentary-timeline P01 | 8min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -141,6 +142,8 @@ Recent decisions affecting current work:
 - [Phase 07-03]: ner_weight=0.9 (second highest after dense=1.0) — entity matches are precision signals in RRF
 - [Phase 07-03]: rrf_sweep.py overrides config in-memory, never writes to disk — safe for concurrent use
 - [Phase 07-04]: Single comprehensive test file over per-optimization files — Phase 7 final checklist
+- [Phase 09-01]: gpt-4.1-mini selected for all summary generation (consistent with Phase 7 cost optimization)
+- [Phase 09-01]: openai and tqdm added to requirements-build.txt — were missing despite plan claiming they existed
 
 ### Roadmap Evolution
 
@@ -162,6 +165,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-07T21:15:09.608Z
-Stopped at: Phase 9 UI-SPEC approved
-Resume file: .planning/phases/09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries/09-UI-SPEC.md
+Last session: 2026-04-08T01:51:10.036Z
+Stopped at: Completed 09-01-PLAN.md
+Resume file: None
