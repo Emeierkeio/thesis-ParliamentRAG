@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 10-02-PLAN.md — all tasks done
-last_updated: "2026-04-08T12:17:38.217Z"
+stopped_at: Completed 10-01-PLAN.md
+last_updated: "2026-04-08T12:18:13.517Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 11
   completed_phases: 8
   total_plans: 37
-  completed_plans: 32
+  completed_plans: 33
   percent: 0
 ---
 
@@ -80,6 +80,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P04 | 15 | 2 tasks | 6 files |
 | Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P05 | 2 | 1 tasks | 4 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P02 | 6 | 2 tasks | 5 files |
+| Phase 10-debate-transcript-viewer-with-contextual-chatbot P01 | 8min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -158,6 +159,8 @@ Recent decisions affecting current work:
 - [Phase 09-05]: ChamberSelector uses value/onChange props (not chamber/onChamberChange as plan stated) — cast filters.chamber as ChamberValue at call site
 - [Phase 10-02]: Followed timeline-api.ts pattern for transcript API client: cookie-based locale, buildHeaders(), individual fetch functions
 - [Phase 10-02]: Transcript i18n namespace placed as sibling to Timeline in both locale files with 26 keys
+- [Phase 10-debate-transcript-viewer-with-contextual-chatbot]: Italian recap (recapIt) used as universal fallback when locale-specific recap is absent in get_debate_suggestions — avoids empty suggestions for debates only indexed in Italian
+- [Phase 10-debate-transcript-viewer-with-contextual-chatbot]: Lazy speech text endpoint: /speech/{id} fetched on accordion expand, not on page load
 
 ### Roadmap Evolution
 
@@ -180,6 +183,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T12:17:38.214Z
-Stopped at: Completed 10-02-PLAN.md — all tasks done
+Last session: 2026-04-08T12:18:13.514Z
+Stopped at: Completed 10-01-PLAN.md
 Resume file: None
