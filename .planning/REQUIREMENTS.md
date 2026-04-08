@@ -101,9 +101,9 @@
 
 - [x] **TL-01**: Build-time AI summary generation script (`generate_summaries.py`) — generates IT+EN recaps for Sessions, Debates, and per-debate speaker summaries, stored as Neo4j properties (Session.recapIt/recapEn, Debate.recapIt/recapEn, SpeakerDebateSummary node)
 - [x] **TL-02**: Makefile targets `make generate-summaries` (resumable, with DRY_RUN support) and `make db-full` (db-all + generate-summaries)
-- [ ] **TL-03**: Three REST endpoints: GET /api/timeline (paginated session list with cursor), GET /api/timeline/debates/{id} (debate detail), GET /api/timeline/speakers/{debateId}/{speakerId} (speaker summary)
-- [ ] **TL-04**: Timeline API supports chamber filtering, keyword search (debate titles + recap text + speaker names), and date range filtering
-- [ ] **TL-05**: Timeline API returns locale-appropriate recap (recapIt or recapEn) based on Accept-Language header
+- [x] **TL-03**: Three REST endpoints: GET /api/timeline (paginated session list with cursor), GET /api/timeline/debates/{id} (debate detail), GET /api/timeline/speakers/{debateId}/{speakerId} (speaker summary)
+- [x] **TL-04**: Timeline API supports chamber filtering, keyword search (debate titles + recap text + speaker names), and date range filtering
+- [x] **TL-05**: Timeline API returns locale-appropriate recap (recapIt or recapEn) based on Accept-Language header
 - [ ] **TL-06**: Browsable /timeline page with collapsible session cards, expandable debate details, infinite scroll, search, and date range filters
 - [ ] **TL-07**: i18n keys for all timeline UI text in both IT and EN locale files, sidebar navigation link with CalendarDays icon
 - [ ] **TL-08**: Per-debate speaker summaries: speaker rows with name, party badge, role badge, government shield, expandable lazy-loaded AI position summary
@@ -195,9 +195,9 @@
 | OPT-07 | Phase 7 | Complete |
 | TL-01 | Phase 9 | Complete |
 | TL-02 | Phase 9 | Complete |
-| TL-03 | Phase 9 | Pending |
-| TL-04 | Phase 9 | Pending |
-| TL-05 | Phase 9 | Pending |
+| TL-03 | Phase 9 | Complete |
+| TL-04 | Phase 9 | Complete |
+| TL-05 | Phase 9 | Complete |
 | TL-06 | Phase 9 | Pending |
 | TL-07 | Phase 9 | Pending |
 | TL-08 | Phase 9 | Pending |

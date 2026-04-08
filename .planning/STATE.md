@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 09-01-PLAN.md
-last_updated: "2026-04-08T01:51:10.040Z"
+stopped_at: Completed 09-02-PLAN.md (backend timeline API)
+last_updated: "2026-04-08T01:51:43.172Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 9
   completed_phases: 7
   total_plans: 31
-  completed_plans: 27
+  completed_plans: 28
   percent: 0
 ---
 
@@ -75,6 +75,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 07-pipeline-optimization P03 | 10min | 2 tasks | 6 files |
 | Phase 07-pipeline-optimization P04 | 5min | 1 tasks | 1 files |
 | Phase 09-parliamentary-timeline P01 | 8min | 2 tasks | 3 files |
+| Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries P02 | 2min | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -144,6 +145,9 @@ Recent decisions affecting current work:
 - [Phase 07-04]: Single comprehensive test file over per-optimization files — Phase 7 final checklist
 - [Phase 09-01]: gpt-4.1-mini selected for all summary generation (consistent with Phase 7 cost optimization)
 - [Phase 09-01]: openai and tqdm added to requirements-build.txt — were missing despite plan claiming they existed
+- [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: timeline_service.py as flat module (not package) — consistent with other services in codebase
+- [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: Search uses EXISTS subquery at session WHERE level to return session-level results when any debate matches (titles, recap, speaker names)
+- [Phase 09-parliamentary-timeline-with-daily-debates-recap-and-per-debate-speaker-summaries]: Votes queried via Session path (Debate←HAS_DEBATE—Session—HAS_VOTE→Vote) per Phase 1 schema design
 
 ### Roadmap Evolution
 
@@ -165,6 +169,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T01:51:10.036Z
-Stopped at: Completed 09-01-PLAN.md
+Last session: 2026-04-08T01:51:43.169Z
+Stopped at: Completed 09-02-PLAN.md (backend timeline API)
 Resume file: None
