@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 12-01-PLAN.md
-last_updated: "2026-07-03T16:13:14.111Z"
+stopped_at: Completed 12-03-PLAN.md
+last_updated: "2026-07-03T16:18:03.803Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 12
   completed_phases: 9
   total_plans: 43
-  completed_plans: 39
+  completed_plans: 40
   percent: 0
 ---
 
@@ -87,6 +87,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P06 | 3min | 2 tasks | 5 files |
 | Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P02 | 1 | 2 tasks | 3 files |
 | Phase 12 P01 | 4min | 3 tasks | 9 files |
+| Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P03 | 7min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -181,6 +182,9 @@ Recent decisions affecting current work:
 - [Phase 12-02]: legislature: int = 19 placed after chamber in router/service signature; AND s.legislature = $legislature inserted first after chamber WHERE filter; debate-detail/speaker-summary left unfiltered (id-scoped via leg18_/leg19_ prefix)
 - [Phase 12]: [12-01]: legislature kwarg defaults to 19 on all signatures — zero behavior change until XVIII data is ingested, unmigrated callers unaffected
 - [Phase 12]: [12-01]: AND s.legislature = $legislature appended to existing WHERE s.chamber IN $chambers in all channels — purely additive
+- [Phase 12-03]: ROMAN_MAP duplicated in db_builder.py (not imported from download_deputies_csv.py) to keep build/ scripts standalone per Phase 01-04 decision
+- [Phase 12-03]: [Phase 12-03]: db-ingest-leg18 uses update+update-senate modes (not build) — additive, no nuke, preserves XIX data
+- [Phase 12-03]: [Phase 12-03]: _build_gov_uri_map and load_government_members_from_path also parametrized to achieve deputati_xix.csv grep count = 0
 
 ### Roadmap Evolution
 
@@ -204,6 +208,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-03T16:13:14.107Z
-Stopped at: Completed 12-01-PLAN.md
+Last session: 2026-07-03T16:18:03.797Z
+Stopped at: Completed 12-03-PLAN.md
 Resume file: None
