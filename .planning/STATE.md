@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: "Completed 10-06-PLAN.md (checkpoint: human-verify Task 3)"
-last_updated: "2026-04-08T12:28:37.115Z"
+stopped_at: Completed 12-02-PLAN.md
+last_updated: "2026-07-03T16:10:02.678Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
-  total_phases: 11
+  total_phases: 12
   completed_phases: 9
-  total_plans: 37
-  completed_plans: 37
+  total_plans: 43
+  completed_plans: 38
   percent: 0
 ---
 
@@ -85,6 +85,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P03 | 5min | 2 tasks | 3 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P04 | 2min | 2 tasks | 5 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P06 | 3min | 2 tasks | 5 files |
+| Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P02 | 1 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -176,6 +177,7 @@ Recent decisions affecting current work:
 - [Phase 10-04]: PhaseHeader includes data-phase-id and TranscriptPanel includes targetSpeechId/onTargetConsumed from the start to avoid cross-plan file conflicts
 - [Phase 10-06]: TranscriptChatbot is stateless: hook called at page level (single instance) to prevent duplicate SSE connections on desktop+mobile
 - [Phase 10-06]: SelectionAskButton uses mouseup event with onMouseDown preventDefault to prevent selection clearing when clicking the button
+- [Phase 12-02]: legislature: int = 19 placed after chamber in router/service signature; AND s.legislature = $legislature inserted first after chamber WHERE filter; debate-detail/speaker-summary left unfiltered (id-scoped via leg18_/leg19_ prefix)
 
 ### Roadmap Evolution
 
@@ -185,6 +187,7 @@ Recent decisions affecting current work:
 - Phase 8 added: Senate individual vote scraping from senato.it HTML pages
 - Phase 9 added: Parliamentary timeline with daily debates recap and per-debate speaker summaries
 - Phase 10 added: Debate transcript viewer with contextual chatbot
+- Phase 12 added: Multi-legislature support — backend legislature filter, parametrized XVIII ingest, legislature selector in frontend
 
 ### Pending Todos
 
@@ -198,6 +201,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T12:28:37.112Z
-Stopped at: Completed 10-06-PLAN.md (checkpoint: human-verify Task 3)
+Last session: 2026-07-03T16:10:02.674Z
+Stopped at: Completed 12-02-PLAN.md
 Resume file: None
