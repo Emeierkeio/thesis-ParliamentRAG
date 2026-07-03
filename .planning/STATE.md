@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 12-02-PLAN.md
-last_updated: "2026-07-03T16:10:02.678Z"
+stopped_at: Completed 12-01-PLAN.md
+last_updated: "2026-07-03T16:13:14.111Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 12
   completed_phases: 9
   total_plans: 43
-  completed_plans: 38
+  completed_plans: 39
   percent: 0
 ---
 
@@ -86,6 +86,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P04 | 2min | 2 tasks | 5 files |
 | Phase 10-debate-transcript-viewer-with-contextual-chatbot P06 | 3min | 2 tasks | 5 files |
 | Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P02 | 1 | 2 tasks | 3 files |
+| Phase 12 P01 | 4min | 3 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -178,6 +179,8 @@ Recent decisions affecting current work:
 - [Phase 10-06]: TranscriptChatbot is stateless: hook called at page level (single instance) to prevent duplicate SSE connections on desktop+mobile
 - [Phase 10-06]: SelectionAskButton uses mouseup event with onMouseDown preventDefault to prevent selection clearing when clicking the button
 - [Phase 12-02]: legislature: int = 19 placed after chamber in router/service signature; AND s.legislature = $legislature inserted first after chamber WHERE filter; debate-detail/speaker-summary left unfiltered (id-scoped via leg18_/leg19_ prefix)
+- [Phase 12]: [12-01]: legislature kwarg defaults to 19 on all signatures — zero behavior change until XVIII data is ingested, unmigrated callers unaffected
+- [Phase 12]: [12-01]: AND s.legislature = $legislature appended to existing WHERE s.chamber IN $chambers in all channels — purely additive
 
 ### Roadmap Evolution
 
@@ -201,6 +204,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-03T16:10:02.674Z
-Stopped at: Completed 12-02-PLAN.md
+Last session: 2026-07-03T16:13:14.107Z
+Stopped at: Completed 12-01-PLAN.md
 Resume file: None
