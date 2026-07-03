@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 12-03-PLAN.md
-last_updated: "2026-07-03T16:18:03.803Z"
+stopped_at: Completed 12-05-PLAN.md
+last_updated: "2026-07-03T16:23:56.858Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 12
   completed_phases: 9
   total_plans: 43
-  completed_plans: 40
+  completed_plans: 41
   percent: 0
 ---
 
@@ -88,6 +88,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P02 | 1 | 2 tasks | 3 files |
 | Phase 12 P01 | 4min | 3 tasks | 9 files |
 | Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P03 | 7min | 3 tasks | 3 files |
+| Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P05 | 3min | 3 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -185,6 +186,7 @@ Recent decisions affecting current work:
 - [Phase 12-03]: ROMAN_MAP duplicated in db_builder.py (not imported from download_deputies_csv.py) to keep build/ scripts standalone per Phase 01-04 decision
 - [Phase 12-03]: [Phase 12-03]: db-ingest-leg18 uses update+update-senate modes (not build) — additive, no nuke, preserves XIX data
 - [Phase 12-03]: [Phase 12-03]: _build_gov_uri_map and load_government_members_from_path also parametrized to achieve deputati_xix.csv grep count = 0
+- [Phase 12-05]: LegislatureSelector uses numeric 18|19 type; t(String(option)) used to satisfy TS union; badgeKey cast as never for dynamic next-intl key
 
 ### Roadmap Evolution
 
@@ -208,6 +210,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-03T16:18:03.797Z
-Stopped at: Completed 12-03-PLAN.md
+Last session: 2026-07-03T16:23:56.855Z
+Stopped at: Completed 12-05-PLAN.md
 Resume file: None
