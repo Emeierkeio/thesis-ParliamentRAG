@@ -89,7 +89,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12
 
 **Critical Deploy Note:** Phase 1 and Phase 2 must be deployed as a unit. Do not run the Phase 1 rebuilt database against the old (pre-Phase-2) backend — schema properties will return `null` silently.
 
@@ -222,3 +222,26 @@ Plans:
 
 Plans:
 - [ ] TBD (run /gsd:plan-phase 11 to break down)
+
+### Phase 12: Multi-legislature support: backend legislature filter, parametrized XVIII ingest, legislature selector in frontend
+
+**Goal:** Users can choose the legislature (XVIII or XIX) alongside the existing chamber selector. A `legislature` filter (default 19) is added to every retrieval channel and the timeline before any XVIII data is ingested, so XIX answers are never contaminated by 2018-2022 content. The build pipeline is parametrized by legislature, XVIII data (741 Camera + 459 Senate sittings) is ingested additively, and a frontend LegislatureSelector mirrors the ChamberSelector pattern.
+**Requirements**: LEG-01, LEG-02, LEG-03, LEG-04, LEG-05, LEG-06
+**Depends on:** Phase 11
+**Success Criteria** (what must be TRUE):
+  1. QueryRequest/ChatRequest and all four retrieval channels filter by `s.legislature = $legislature` (default 19)
+  2. The timeline endpoint scopes sessions to the selected legislature (default 19)
+  3. The build pipeline accepts `--legislature N`; `get_existing_session_numbers` filters by legislature; `make db-ingest-leg18` ingests XVIII additively
+  4. XVIII Session nodes (legislature=18) exist in Neo4j (camera 741, senato 459) with XIX data unchanged
+  5. A frontend LegislatureSelector (XVIII/XIX) persists like chamber and sends legislature in the query payload
+  6. E2E: XVIII queries return 2018-2022 citations; XIX queries are unchanged (no contamination)
+**Out of scope (documented gaps):** XVIII timeline AI summaries, XVIII individual votes, authority-per-legislature (MEMBER_OF rel legislature property + scorer filter), XVIII government roles in app_config.py.
+**Plans**: 6 plans
+
+Plans:
+- [ ] 12-01-PLAN.md — Backend query/chat retrieval legislature filter (request models + 4 channels + engine) + Wave 0 tests
+- [ ] 12-02-PLAN.md — Timeline router + service legislature filter + Wave 0 test
+- [ ] 12-03-PLAN.md — Build pipeline parametrization (db_builder loaders + dedup fix + build_and_update modes + CLI + make target)
+- [ ] 12-04-PLAN.md — XVIII additive ingest run (checkpoint-gated) + Cypher count verification
+- [ ] 12-05-PLAN.md — Frontend LegislatureSelector + use-chat state/persistence/payload + badge wiring
+- [ ] 12-06-PLAN.md — End-to-end verification (automated gates + human E2E checkpoint)
