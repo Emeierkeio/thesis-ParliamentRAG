@@ -157,12 +157,16 @@ Plans:
 - [ ] 07-03-PLAN.md — NER entity channel + RRF weight sweep + compass Senate validation
 - [ ] 07-04-PLAN.md — Comprehensive validation test suite + human quality verification
 
-### Phase 8: Senate individual vote scraping from senato.it HTML pages
+### Phase 8: Unified votes via SPARQL (Camera + Senato, aggregate + individual)
 
-**Goal:** [To be planned]
-**Requirements**: TBD
-**Depends on:** Phase 7
-**Plans:** 4/4 plans complete
+**Goal:** Complete vote data for both chambers and both legislatures from the official SPARQL endpoints — no HTML scraping. Camera XML stopped publishing raccoltaVotazioni after sitting ~350 (late 2024), so SPARQL becomes the single source of truth for votes.
+**Requirements**: TBD (plan-phase will derive)
+**Depends on:** Phase 12 (legislature dimension in DB)
+**Scope:**
+1. Aggregate Vote nodes: Camera sittings >350 + all Senate sittings (dati.camera.it ocd:votazione, dati.senato.it osr:Votazione — both verified to carry per-sitting aggregates: esito, presenti, favorevoli, contrari)
+2. Individual votes Senato: osr:Votazione → favorevole/contrario/astenuto → senatore URIs (verified 2026-07-02)
+3. Individual votes Camera: resume existing sparql_ingester run (69/391 deputies done)
+4. Prerequisite fix: sparql_ingester links IndividualVote→Vote via Session {number} WITHOUT legislature filter — session numbers now collide across XVIII/XIX
 
 Plans:
 - [ ] TBD (run /gsd:plan-phase 8 to break down)
