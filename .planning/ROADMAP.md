@@ -245,3 +245,13 @@ Plans:
 - [ ] 12-04-PLAN.md — XVIII additive ingest run (checkpoint-gated) + Cypher count verification
 - [ ] 12-05-PLAN.md — Frontend LegislatureSelector + use-chat state/persistence/payload + badge wiring
 - [ ] 12-06-PLAN.md — End-to-end verification (automated gates + human E2E checkpoint)
+
+### Phase 13: Multi-country support via ParlaMint: TEI parser, country dimension, English-pivot retrieval, country selector
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 12
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 13 to break down)

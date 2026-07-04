@@ -197,6 +197,7 @@ Recent decisions affecting current work:
 - Phase 9 added: Parliamentary timeline with daily debates recap and per-debate speaker summaries
 - Phase 10 added: Debate transcript viewer with contextual chatbot
 - Phase 12 added: Multi-legislature support — backend legislature filter, parametrized XVIII ingest, legislature selector in frontend
+- Phase 13 added: Multi-country support via ParlaMint — TEI parser, country dimension, English-pivot retrieval, country selector
 
 ### Pending Todos
 
