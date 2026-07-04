@@ -160,7 +160,7 @@ Plans:
 ### Phase 8: Unified votes via SPARQL (Camera + Senato, aggregate + individual)
 
 **Goal:** Complete vote data for both chambers and both legislatures from the official SPARQL endpoints — no HTML scraping. Camera XML stopped publishing raccoltaVotazioni after sitting ~350 (late 2024), so SPARQL becomes the single source of truth for votes.
-**Requirements**: TBD (plan-phase will derive)
+**Requirements**: VOT-01, VOT-02, VOT-03, VOT-04, VOT-05, VOT-06, VOT-07, VOT-08
 **Depends on:** Phase 12 (legislature dimension in DB)
 **Scope:**
 1. Aggregate Vote nodes: Camera sittings >350 + all Senate sittings (dati.camera.it ocd:votazione, dati.senato.it osr:Votazione — both verified to carry per-sitting aggregates: esito, presenti, favorevoli, contrari)
@@ -168,8 +168,16 @@ Plans:
 3. Individual votes Camera: resume existing sparql_ingester run (69/391 deputies done)
 4. Prerequisite fix: sparql_ingester links IndividualVote→Vote via Session {number} WITHOUT legislature filter — session numbers now collide across XVIII/XIX
 
+**Plans**: 7 plans
+
 Plans:
-- [ ] TBD (run /gsd:plan-phase 8 to break down)
+- [ ] 08-01-PLAN.md — Fix Session{number} collision + chamber/legislature filters in sparql_ingester (VOT-01)
+- [ ] 08-02-PLAN.md — Camera aggregate votes (XIX 350+, XVIII gap-fill) + individual resume CLI (VOT-02, VOT-03, VOT-06)
+- [ ] 08-03-PLAN.md — New senate_sparql_ingester: GET-based aggregate vote ingest (VOT-04)
+- [ ] 08-04-PLAN.md — Senate individual votes per-sitting (VOT-05)
+- [ ] 08-05-PLAN.md — Makefile targets enrich-votes / enrich-votes-individual / enrich-votes-test (VOT-07)
+- [ ] 08-06-PLAN.md — Human-gated aggregate ingest run + timeline verification (VOT-08)
+- [ ] 08-07-PLAN.md — Human-gated individual ingest run + count verification (VOT-05, VOT-06)
 
 ### Phase 9: Parliamentary timeline with daily debates recap and per-debate speaker summaries
 
