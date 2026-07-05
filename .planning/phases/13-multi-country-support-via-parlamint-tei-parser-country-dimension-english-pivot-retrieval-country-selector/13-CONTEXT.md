@@ -87,12 +87,18 @@ Add foreign parliaments (pilot: **GB, FR, ES**) as a queryable dimension: chat w
 
 </specifics>
 
+### D7 — Forward-compatibility for EP-family comparison (Phase 15, user-requested 2026-07-05)
+The follow-up phase compares parties of the same European Parliament family across countries (e.g. S&D: PD vs PSOE per topic, intra-family spread). Phase 13 MUST NOT block it:
+- ParliamentaryGroup nodes (foreign AND Italian) get an optional `ep_family` property (values: S&D, EPP, ECR, PfE, Renew, Greens/EFA, The Left, NI) — populated later from a hand-curated, time-versioned mapping CSV (`data/ep_families.csv`), NOT in phase 13 scope.
+- Compass per-country computation must be callable programmatically with (country, topic) so Phase 15 can overlay multiple countries in one chart.
+- Pilot countries stay GB/FR/ES — ES is mandatory (PSOE/PP make the S&D/EPP comparison immediate; GB post-Brexit has no EP family: display as "—", useful control case).
+
 <deferred>
 ## Deferred Ideas
+- **Phase 15 — European party families** (user-requested): curated party→EP-family mapping per time period, cross-country compass overlay colored by family, intra-family spread index per topic ("S&D compatto sul clima, spaccato sulle migrazioni"), most-divergent-party metric. ~2-3 plans once Phase 13 lands.
 - Remaining 26 ParlaMint countries (config-only after pilot)
-- Cross-country comparison view ("stesso tema, 4 parlamenti")
 - Foreign timeline summaries (LLM cost), votes via national APIs (EP/Bundestag/Commons have them)
-- EU Parliament via data.europarl.europa.eu (native API, multilingual verbatim — best candidate for country #4)
+- EU Parliament via data.europarl.europa.eu (native API, multilingual verbatim — best candidate for country #4; also the authoritative source to auto-derive EP-family mapping)
 </deferred>
 
 ---
