@@ -212,6 +212,7 @@ Recent decisions affecting current work:
 - Phase 10 added: Debate transcript viewer with contextual chatbot
 - Phase 12 added: Multi-legislature support — backend legislature filter, parametrized XVIII ingest, legislature selector in frontend
 - Phase 13 added: Multi-country support via ParlaMint — TEI parser, country dimension, English-pivot retrieval, country selector
+- Phase 14 added: Vote intelligence — speech-vote coherence, vote-based compass axis, cohesion indices, vote facts in RAG, votes explorer page
 
 ### Pending Todos
 

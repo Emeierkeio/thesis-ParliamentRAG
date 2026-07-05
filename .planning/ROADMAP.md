@@ -267,3 +267,13 @@ Plans:
 
 Plans:
 - [ ] TBD (run /gsd:plan-phase 13 to break down)
+
+### Phase 14: Vote intelligence: speech-vote coherence, vote-based compass axis, cohesion indices, vote facts in RAG, votes explorer page
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 13
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 14 to break down)
