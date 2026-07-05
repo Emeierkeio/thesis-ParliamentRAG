@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 08-02-PLAN.md
-last_updated: "2026-07-05T00:39:08.928Z"
+stopped_at: Completed 08-05-PLAN.md
+last_updated: "2026-07-05T00:42:45.609Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 13
   completed_phases: 10
   total_plans: 50
-  completed_plans: 47
+  completed_plans: 48
   percent: 0
 ---
 
@@ -93,6 +93,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P01 | 5min | 2 tasks | 2 files |
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P04 | 3min | 2 tasks | 2 files |
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P02 | 5min | 2 tasks | 2 files |
+| Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P05 | 3 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -199,6 +200,7 @@ Recent decisions affecting current work:
 - [Phase 08-04]: --aggregate-only and --individual-only are mutually exclusive argparse group — prevents accidental double-run
 - [Phase 08-02]: SELECT DISTINCT in Camera aggregate query — avoids 2x row count from two rdf:type triples per votazione (verified live)
 - [Phase 08-02]: CLI --aggregate-only/--skip-aggregate/--legislature/--start-session separates aggregate from individual ingest paths
+- [Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages]: [08-05]: enrich-votes-test skips neo4j-wait (assumes running); --limit-sessions confirmed valid on sparql_ingester.py aggregate path
 
 ### Roadmap Evolution
 
@@ -223,6 +225,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-05T00:39:08.924Z
-Stopped at: Completed 08-02-PLAN.md
+Last session: 2026-07-05T00:42:45.605Z
+Stopped at: Completed 08-05-PLAN.md
 Resume file: None
