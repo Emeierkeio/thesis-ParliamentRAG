@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 08-03-PLAN.md
-last_updated: "2026-07-05T00:21:08.261Z"
+stopped_at: Completed 08-01-PLAN.md
+last_updated: "2026-07-05T00:24:50.678Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 13
   completed_phases: 10
   total_plans: 50
-  completed_plans: 44
+  completed_plans: 45
   percent: 0
 ---
 
@@ -90,6 +90,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P03 | 7min | 3 tasks | 3 files |
 | Phase 12-multi-legislature-support-backend-legislature-filter-parametrized-xviii-ingest-legislature-selector-in-frontend P05 | 3min | 3 tasks | 7 files |
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P03 | 3min | 2 tasks | 2 files |
+| Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P01 | 5min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -189,6 +190,9 @@ Recent decisions affecting current work:
 - [Phase 12-03]: [Phase 12-03]: _build_gov_uri_map and load_government_members_from_path also parametrized to achieve deputati_xix.csv grep count = 0
 - [Phase 12-05]: LegislatureSelector uses numeric 18|19 type; t(String(option)) used to satisfy TS union; badgeKey cast as never for dynamic next-intl key
 - [Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages]: [08-03]: GET-only SPARQL for dati.senato.it; per-seduta scoping; senato_-prefixed Vote ids; outcome from favorevoli>=maggioranza
+- [Phase 08-01]: coalesce(d.chamber, 'camera') = $chamber default keeps camera as implicit value for pre-existing nodes with no chamber property
+- [Phase 08-01]: Chamber prefix in IndividualVote id (iv_{chamber}_{person_id}...) prevents MERGE collisions between Camera and Senate nodes with identical person_id+session+vote numbers
+- [Phase 08-01]: legislature param defaults to 19 everywhere — zero behavior change for unmigrated callers
 
 ### Roadmap Evolution
 
@@ -213,6 +217,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-05T00:21:08.257Z
-Stopped at: Completed 08-03-PLAN.md
+Last session: 2026-07-05T00:24:50.674Z
+Stopped at: Completed 08-01-PLAN.md
 Resume file: None
