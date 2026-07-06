@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 14-01-PLAN.md
-last_updated: "2026-07-06T23:44:26.559Z"
+stopped_at: Completed 14-02-PLAN.md
+last_updated: "2026-07-06T23:45:26.465Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 1
   completed_phases: 0
   total_plans: 8
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -95,6 +95,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P02 | 5min | 2 tasks | 2 files |
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P05 | 3 | 1 tasks | 1 files |
 | Phase 14-vote-intelligence P01 | 3 | 3 tasks | 2 files |
+| Phase 14 P02 | 4 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -205,6 +206,9 @@ Recent decisions affecting current work:
 - [Phase 14-vote-intelligence]: [14-01]: votes_service.py as single source of truth — all 8 vote analytics functions (Rice math, cohesion, rebellion, search, facts, coherence) in one module for clean downstream imports
 - [Phase 14-vote-intelligence]: [14-01]: availability guard pattern — has_individual_votes() checked before Rice queries; returns {available: False, reason: individual_votes_pending} not zeros (Pitfall 3 guard)
 - [Phase 14-vote-intelligence]: [14-01]: coalesce(a.title, d.title, v.subject) label hierarchy enforced in all 3 vote Cyphers that return labels — avoids generic Votazione labels from SPARQL-ingested votes (Pitfall 4)
+- [Phase 14-02]: numpy SVD-PCA only in vote_pipeline.py — zero scipy imports (anaconda NumPy 2.x/scipy incompatibility)
+- [Phase 14-02]: pca_2d returns full variance_explained; _compute_vote_compass slices to [:2] in response payload
+- [Phase 14-02]: chamber default 'camera' not 'both' on GET /api/compass/votes — vote compass mixes political systems across chambers (Pitfall 1)
 
 ### Roadmap Evolution
 
@@ -230,6 +234,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-06T23:44:26.556Z
-Stopped at: Completed 14-01-PLAN.md
+Last session: 2026-07-06T23:45:26.463Z
+Stopped at: Completed 14-02-PLAN.md
 Resume file: None
