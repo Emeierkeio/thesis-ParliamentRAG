@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 08-05-PLAN.md
-last_updated: "2026-07-05T00:42:45.609Z"
+stopped_at: Completed 14-01-PLAN.md
+last_updated: "2026-07-06T23:44:26.559Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
-  total_phases: 13
-  completed_phases: 10
-  total_plans: 50
-  completed_plans: 48
+  total_phases: 1
+  completed_phases: 0
+  total_plans: 8
+  completed_plans: 1
   percent: 0
 ---
 
@@ -94,6 +94,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P04 | 3min | 2 tasks | 2 files |
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P02 | 5min | 2 tasks | 2 files |
 | Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages P05 | 3 | 1 tasks | 1 files |
+| Phase 14-vote-intelligence P01 | 3 | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -201,6 +202,9 @@ Recent decisions affecting current work:
 - [Phase 08-02]: SELECT DISTINCT in Camera aggregate query — avoids 2x row count from two rdf:type triples per votazione (verified live)
 - [Phase 08-02]: CLI --aggregate-only/--skip-aggregate/--legislature/--start-session separates aggregate from individual ingest paths
 - [Phase 08-senate-individual-vote-scraping-from-senato-it-html-pages]: [08-05]: enrich-votes-test skips neo4j-wait (assumes running); --limit-sessions confirmed valid on sparql_ingester.py aggregate path
+- [Phase 14-vote-intelligence]: [14-01]: votes_service.py as single source of truth — all 8 vote analytics functions (Rice math, cohesion, rebellion, search, facts, coherence) in one module for clean downstream imports
+- [Phase 14-vote-intelligence]: [14-01]: availability guard pattern — has_individual_votes() checked before Rice queries; returns {available: False, reason: individual_votes_pending} not zeros (Pitfall 3 guard)
+- [Phase 14-vote-intelligence]: [14-01]: coalesce(a.title, d.title, v.subject) label hierarchy enforced in all 3 vote Cyphers that return labels — avoids generic Votazione labels from SPARQL-ingested votes (Pitfall 4)
 
 ### Roadmap Evolution
 
@@ -226,6 +230,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-05T00:42:45.605Z
-Stopped at: Completed 08-05-PLAN.md
+Last session: 2026-07-06T23:44:26.556Z
+Stopped at: Completed 14-01-PLAN.md
 Resume file: None
