@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 14-06-PLAN.md
-last_updated: "2026-07-07T00:07:38.734Z"
+stopped_at: Completed 14-07-PLAN.md
+last_updated: "2026-07-07T00:09:51.617Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 1
   completed_phases: 0
   total_plans: 8
-  completed_plans: 6
+  completed_plans: 7
   percent: 0
 ---
 
@@ -100,6 +100,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 14-vote-intelligence PP04 | 3min | 3 tasks | 3 files |
 | Phase 14 P05 | 4 | 3 tasks | 7 files |
 | Phase 14-vote-intelligence PP06 | 6min | 3 tasks | 3 files |
+| Phase 14-vote-intelligence P07 | 4min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -219,6 +220,9 @@ Recent decisions affecting current work:
 - [Phase 14-05]: votes-api.ts uses config.api.baseUrl for NEXT_PUBLIC_API_URL override support
 - [Phase 14-vote-intelligence]: [14-06]: VoteCoherenceBlock rendered inside citations CollapsibleSection — ties vote data visually to cited sessions
 - [Phase 14-vote-intelligence]: [14-06]: Vote-fact chips styled amber (distinct from citation chips), exempt from citation-verification, navigate to /transcript/{debate_id} or /timeline fallback
+- [Phase 14-07]: VoteCompassScatter uses config.politicalGroups for party dot colors — mixed-case Neo4j party names match the mixed-case config keys
+- [Phase 14-07]: riceByParty lookup normalizes to uppercase — deputy.group is uppercase; cohesion.parties mixed-case; both normalized for reliable matching
+- [Phase 14-07]: Vote columns hidden entirely (not zeroed) when cohesion.available===false — Pitfall 3 guard maintained in F3
 
 ### Roadmap Evolution
 
@@ -244,6 +248,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-07T00:07:38.732Z
-Stopped at: Completed 14-06-PLAN.md
+Last session: 2026-07-07T00:09:51.613Z
+Stopped at: Completed 14-07-PLAN.md
 Resume file: None
