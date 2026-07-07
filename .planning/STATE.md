@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 14-05-PLAN.md
-last_updated: "2026-07-07T00:00:06.916Z"
+stopped_at: Completed 14-06-PLAN.md
+last_updated: "2026-07-07T00:07:38.734Z"
 last_activity: 2026-04-02 — Roadmap created
 progress:
   total_phases: 1
   completed_phases: 0
   total_plans: 8
-  completed_plans: 5
+  completed_plans: 6
   percent: 0
 ---
 
@@ -99,6 +99,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 14-vote-intelligence P03 | 2 | 2 tasks | 4 files |
 | Phase 14-vote-intelligence PP04 | 3min | 3 tasks | 3 files |
 | Phase 14 P05 | 4 | 3 tasks | 7 files |
+| Phase 14-vote-intelligence PP06 | 6min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -216,6 +217,8 @@ Recent decisions affecting current work:
 - [Phase 14-04]: vote_facts and _session_ids initialised before gen_mode branch — both SSE events (F1, F4) degrade gracefully to no-op when pipeline mode is not direct or data is absent
 - [Phase 14-04]: verified_citations do not carry session_id — vote_coherence falls back to _session_ids from evidence_dicts (same source as F4 injection)
 - [Phase 14-05]: votes-api.ts uses config.api.baseUrl for NEXT_PUBLIC_API_URL override support
+- [Phase 14-vote-intelligence]: [14-06]: VoteCoherenceBlock rendered inside citations CollapsibleSection — ties vote data visually to cited sessions
+- [Phase 14-vote-intelligence]: [14-06]: Vote-fact chips styled amber (distinct from citation chips), exempt from citation-verification, navigate to /transcript/{debate_id} or /timeline fallback
 
 ### Roadmap Evolution
 
@@ -241,6 +244,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-07-07T00:00:06.913Z
-Stopped at: Completed 14-05-PLAN.md
+Last session: 2026-07-07T00:07:38.732Z
+Stopped at: Completed 14-06-PLAN.md
 Resume file: None

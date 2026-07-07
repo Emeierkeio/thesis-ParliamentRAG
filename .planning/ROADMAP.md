@@ -3,7 +3,7 @@
 **Goal:** The existing vote graph (Vote, IndividualVote, VOTED, ON_VOTE, HAS_VOTE) becomes five user-facing intelligence features: F1 speech-vote coherence blocks under chat citations, F2 a vote-based compass axis toggle, F3 party cohesion + deputy rebellion/participation indices, F4 verified vote facts injected into RAG answers, and F5 a filterable votes explorer page. No new data ingestion — pure analytics + API + UI. Every new query filters chamber+legislature (Phase 12 rule); features needing IndividualVote data degrade gracefully (aggregate-only or hidden) while Camera XIX / Senate individual votes are still landing from Phase 8.
 **Requirements**: VI-01, VI-02, VI-03, VI-04, VI-05
 **Depends on:** Phase 13
-**Plans:** 5/8 plans executed
+**Plans:** 6/8 plans executed
 
 Plans:
 - [ ] 14-01-PLAN.md — votes_service.py: Rice/rebellion/participation math + vote facts/coherence/search lookups + Wave 0 tests (VI-01, VI-03, VI-04, VI-05)
